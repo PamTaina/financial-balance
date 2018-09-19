@@ -67,9 +67,8 @@
         <DelphiCompile Include="$(MainSource)">
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
-        <DCCReference Include="..\..\Documents\Embarcadero\Studio\Projects\UFrmPaginaInicial.pas">
+        <DCCReference Include="UFrmPaginaInicial.pas">
             <Form>FrmPaginaInicial</Form>
-            <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="UFrmCadastro.pas">
             <Form>FrmCadastro</Form>
@@ -163,6 +162,10 @@
             <Form>DatabaseModules1</Form>
             <FormType>dfm</FormType>
             <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="UFrmBanner.pas">
+            <Form>FrmBanner</Form>
+            <FormType>dfm</FormType>
         </DCCReference>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>

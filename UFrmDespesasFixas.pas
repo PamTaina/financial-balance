@@ -9,9 +9,6 @@ uses
 
 type
   TFrmDespesasFixas = class(TForm)
-    pnlCabecalhoPaginaInicial: TPanel;
-    lbFinancialBalancePaginaInicial: TLabel;
-    lbDescricao: TLabel;
     pnlFundo: TPanel;
     pnlCategorias: TPanel;
     lbAlimentaçãoDespesasFixas: TLabel;
@@ -38,13 +35,6 @@ type
     imagemAdicionarSaudeFixa: TImage;
     imagemAdicionarTransporteFixa: TImage;
     imagemAdicionarOutrosFixa: TImage;
-    btnMetaAnualTabelaFixas: TSpeedButton;
-    btnMetaAnualTabelaExtra: TSpeedButton;
-    btnMetaMensalTabelaExtra: TSpeedButton;
-    btnMetaDiariaTabelaExtra: TSpeedButton;
-    btnDespesasExtrasTabelaExtra: TSpeedButton;
-    btnDespesasFixasTabelaExtra: TSpeedButton;
-    btnRendaFinanceira: TSpeedButton;
     procedure btnMetaAnualTabelaFixasClick(Sender: TObject);
     procedure btnMetaDiariaTabelaFixasClick(Sender: TObject);
     procedure btnMetaMensalTabelaFixasClick(Sender: TObject);

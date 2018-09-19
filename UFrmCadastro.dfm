@@ -16,93 +16,19 @@ object FrmCadastro: TFrmCadastro
   WindowState = wsMaximized
   PixelsPerInch = 96
   TextHeight = 13
-  object pnlCabecalhoPaginaInicial: TPanel
+  object pnlFundo: TPanel
     Left = 0
     Top = 0
     Width = 1313
-    Height = 65
-    Align = alTop
-    Color = 10921555
-    ParentBackground = False
-    TabOrder = 0
-    DesignSize = (
-      1313
-      65)
-    object btnCadastrar: TSpeedButton
-      Left = 1049
-      Top = 18
-      Width = 129
-      Height = 29
-      Anchors = [akTop, akRight]
-      Caption = 'Cadastrar'
-      Flat = True
-      Font.Charset = ANSI_CHARSET
-      Font.Color = clWhite
-      Font.Height = -19
-      Font.Name = 'Calibri'
-      Font.Style = [fsBold]
-      ParentFont = False
-      ParentShowHint = False
-      ShowHint = False
-      ExplicitLeft = 582
-    end
-    object btnEntrar: TSpeedButton
-      Left = 1184
-      Top = 18
-      Width = 129
-      Height = 29
-      Anchors = [akTop, akRight]
-      Caption = 'Entrar'
-      Flat = True
-      Font.Charset = ANSI_CHARSET
-      Font.Color = clWhite
-      Font.Height = -19
-      Font.Name = 'Calibri'
-      Font.Style = []
-      ParentFont = False
-      ParentShowHint = False
-      ShowHint = False
-      OnClick = btnEntrarClick
-      ExplicitLeft = 717
-    end
-    object lbFinancialBalancePaginaInicial: TLabel
-      Left = 24
-      Top = 18
-      Width = 172
-      Height = 29
-      Caption = 'Financial Balance'
-      Font.Charset = ANSI_CHARSET
-      Font.Color = clWhite
-      Font.Height = -24
-      Font.Name = 'Calibri'
-      Font.Style = [fsBold]
-      ParentFont = False
-    end
-    object lbDescricao: TLabel
-      Left = 152
-      Top = 201
-      Width = 524
-      Height = 36
-      Caption = 'Sistema para Controle Financeiro Pessoal'
-      Font.Charset = ANSI_CHARSET
-      Font.Color = clWhite
-      Font.Height = -32
-      Font.Name = 'Times New Roman'
-      Font.Style = []
-      ParentFont = False
-    end
-  end
-  object pnlFundo: TPanel
-    Left = 0
-    Top = 65
-    Width = 1313
-    Height = 753
+    Height = 818
     Align = alClient
     Color = 14737632
     Ctl3D = True
     ParentBackground = False
     ParentCtl3D = False
-    TabOrder = 1
+    TabOrder = 0
+    ExplicitTop = 65
+    ExplicitHeight = 753
     object pnlCadastro: TPanel
       Left = 488
       Top = 69

@@ -8,11 +8,6 @@ uses
 
 type
   TFrmCadastro = class(TForm)
-    pnlCabecalhoPaginaInicial: TPanel;
-    btnCadastrar: TSpeedButton;
-    btnEntrar: TSpeedButton;
-    lbFinancialBalancePaginaInicial: TLabel;
-    lbDescricao: TLabel;
     pnlFundo: TPanel;
     pnlCadastro: TPanel;
     lbTituloCadastrar: TLabel;
@@ -57,7 +52,7 @@ end;
 
 procedure TFrmCadastro.btnInserirCadastroClick(Sender: TObject);
 begin
-  FrmEntrar.Show;
+  ;
 end;
 
 procedure TFrmCadastro.btnAlimentacaoClick(Sender: TObject);

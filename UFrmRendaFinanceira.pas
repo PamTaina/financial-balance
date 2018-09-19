@@ -7,8 +7,6 @@ uses
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Buttons, Vcl.ExtCtrls;
 type
   TFrmRendaFinanceira = class(TForm)
-    pnlCabecalhoPaginaInicial: TPanel;
-    lbDescricao: TLabel;
     pnlFundo: TPanel;
     pnlRendaFinanceira: TPanel;
     lbTituloRendaFinanceira: TLabel;
@@ -21,13 +19,6 @@ type
     lbDataHoraSalarioFixo: TLabel;
     edDataHoraSalarioExtra: TEdit;
     lbDataHoraSalarioExtra: TLabel;
-    lbFinancialBalancePaginaInicial: TLabel;
-    btnMetaAnualTabelaExtra: TSpeedButton;
-    btnMetaMensalTabelaExtra: TSpeedButton;
-    btnMetaDiariaTabelaExtra: TSpeedButton;
-    btnDespesasExtrasTabelaExtra: TSpeedButton;
-    btnDespesasFixasTabelaExtra: TSpeedButton;
-    btnRendaFinanceira: TSpeedButton;
     procedure btnDespesasFixasClick(Sender: TObject);
     procedure btnDespesasExtrasClick(Sender: TObject);
     procedure btnDespesasFixasTabelaExtraClick(Sender: TObject);

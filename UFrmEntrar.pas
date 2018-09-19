@@ -8,11 +8,6 @@ uses
 
 type
   TFrmEntrar = class(TForm)
-    pnlCabecalhoPaginaInicial: TPanel;
-    btnCadastrar: TSpeedButton;
-    btnEntrar: TSpeedButton;
-    lbFinancialBalancePaginaInicial: TLabel;
-    lbDescricao: TLabel;
     pnlFundo: TPanel;
     pnlEntrar: TPanel;
     lbTituloEntrar: TLabel;
@@ -22,7 +17,6 @@ type
     edCPFCadastro: TEdit;
     edSenhaCadastro: TEdit;
     procedure btnEfetuarEntradaClick(Sender: TObject);
-    procedure btnCadastrarClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -34,21 +28,16 @@ var
 
 implementation
 
-{$R *.dfm}
-
 uses
-    UFrmRendaFinanceira
-  , UFrmCadastro
+    UFrmPaginaInicial
   ;
 
-procedure TFrmEntrar.btnCadastrarClick(Sender: TObject);
-begin
-  FrmCadastro.Show;
-end;
+{$R *.dfm}
+
 
 procedure TFrmEntrar.btnEfetuarEntradaClick(Sender: TObject);
 begin
-  FrmRendaFinanceira.Show;
+  FrmPaginaInicial.DefineTelaAtual(taRendaFinanceira);
 end;
 
 end.

@@ -2,7 +2,7 @@ program PaginaInicial;
 
 uses
   Forms,
-  UFrmPaginaInicial in '..\..\Documents\Embarcadero\Studio\Projects\UFrmPaginaInicial.pas' {FrmPaginaInicial},
+  UFrmPaginaInicial in 'UFrmPaginaInicial.pas' {FrmPaginaInicial},
   UFrmCadastro in 'UFrmCadastro.pas' {FrmCadastro},
   UFrmEntrar in 'UFrmEntrar.pas' {FrmEntrar},
   UFrmRendaFinanceira in 'UFrmRendaFinanceira.pas' {FrmRendaFinanceira},
@@ -25,7 +25,8 @@ uses
   UFrmSaudeDespesasFixas in 'UFrmSaudeDespesasFixas.pas' {FrmSaudeDespesasFixa},
   UFrmTransporteDespesasFixas in 'UFrmTransporteDespesasFixas.pas' {FrmTransporteDespesasFixas},
   UFrmOutrosDespesasFixas in 'UFrmOutrosDespesasFixas.pas' {FrmOutrosDespesasFixas},
-  DatabaseModules in 'DatabaseModules.pas' {DatabaseModules1: TDataModule};
+  DatabaseModules in 'DatabaseModules.pas' {DatabaseModules1: TDataModule},
+  UFrmBanner in 'UFrmBanner.pas' {FrmBanner};
 
 {$R *.res}
 
@@ -56,5 +57,6 @@ begin
   Application.CreateForm(TFrmTransporteDespesasFixas, FrmTransporteDespesasFixas);
   Application.CreateForm(TFrmOutrosDespesasFixas, FrmOutrosDespesasFixas);
   Application.CreateForm(TDatabaseModules1, DatabaseModules1);
+  Application.CreateForm(TFrmBanner, FrmBanner);
   Application.Run;
 end.
