@@ -68,7 +68,7 @@ begin
   FrmBanner.pnlFundo.Parent          := nil;
   FrmEntrar.pnlFundo.Parent          := nil;
   FrmCadastro.pnlFundo.Parent        := nil;
-  FrmRendaFinanceira.pnlFundo.Parent := nil
+  FrmRendaFinanceira.pnlFundo.Parent := nil;
 
   case ceTelaAtual of
              taBanner: FrmBanner.pnlFundo.Parent          := pnlFundo;
