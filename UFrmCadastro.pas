@@ -52,7 +52,7 @@ end;
 
 procedure TFrmCadastro.btnInserirCadastroClick(Sender: TObject);
 begin
-  ;
+ FrmPaginaInicial.DefineTelaAtual(taRendaFinanceira);
 end;
 
 procedure TFrmCadastro.btnAlimentacaoClick(Sender: TObject);

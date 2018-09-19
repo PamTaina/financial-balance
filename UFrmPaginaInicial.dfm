@@ -26,8 +26,7 @@ object FrmPaginaInicial: TFrmPaginaInicial
     ParentBackground = False
     TabOrder = 0
     ExplicitLeft = -1
-    ExplicitTop = 135
-    ExplicitHeight = 531
+    ExplicitTop = 70
   end
   object pnlCabecalhoPrincipal: TPanel
     Left = 0
@@ -38,8 +37,6 @@ object FrmPaginaInicial: TFrmPaginaInicial
     Color = 10921555
     ParentBackground = False
     TabOrder = 1
-    ExplicitLeft = -76
-    ExplicitWidth = 1440
     object lbFinancialBalance: TLabel
       Left = 24
       Top = 18
@@ -54,6 +51,7 @@ object FrmPaginaInicial: TFrmPaginaInicial
       ParentFont = False
     end
     object btnMetaAnual: TSpeedButton
+      Tag = 8
       Left = 1234
       Top = 1
       Width = 129
@@ -69,6 +67,7 @@ object FrmPaginaInicial: TFrmPaginaInicial
       ParentFont = False
       ParentShowHint = False
       ShowHint = False
+      OnClick = btnMetaAnualClick
       ExplicitLeft = 1289
       ExplicitTop = 18
       ExplicitHeight = 29
@@ -90,7 +89,9 @@ object FrmPaginaInicial: TFrmPaginaInicial
       ParentFont = False
       ParentShowHint = False
       ShowHint = False
-      ExplicitLeft = 1113
+      OnClick = btnMetaMensalClick
+      ExplicitLeft = 1108
+      ExplicitTop = -4
     end
     object btnMetaDiaria: TSpeedButton
       Tag = 6
@@ -109,6 +110,7 @@ object FrmPaginaInicial: TFrmPaginaInicial
       ParentFont = False
       ParentShowHint = False
       ShowHint = False
+      OnClick = btnMetaDiariaClick
       ExplicitLeft = 979
     end
     object btnDespesasExtras: TSpeedButton
@@ -128,7 +130,9 @@ object FrmPaginaInicial: TFrmPaginaInicial
       ParentFont = False
       ParentShowHint = False
       ShowHint = False
-      ExplicitLeft = 855
+      OnClick = btnDespesasExtrasClick
+      ExplicitLeft = 860
+      ExplicitTop = -4
     end
     object btnDespesasFixas: TSpeedButton
       Tag = 4
@@ -143,10 +147,11 @@ object FrmPaginaInicial: TFrmPaginaInicial
       Font.Color = clWhite
       Font.Height = -19
       Font.Name = 'Calibri'
-      Font.Style = [fsBold]
+      Font.Style = []
       ParentFont = False
       ParentShowHint = False
       ShowHint = False
+      OnClick = btnDespesasFixasClick
       ExplicitLeft = 680
     end
     object btnRendaFinanceira: TSpeedButton
@@ -170,9 +175,9 @@ object FrmPaginaInicial: TFrmPaginaInicial
     end
     object btnCadastrar: TSpeedButton
       Tag = 1
-      Left = 305
+      Left = 312
       Top = 1
-      Width = 129
+      Width = 126
       Height = 63
       Align = alRight
       Caption = 'Cadastrar'
@@ -187,14 +192,14 @@ object FrmPaginaInicial: TFrmPaginaInicial
       ShowHint = False
       OnClick = btnCadastrarClick
       OnDblClick = btnCadastrarClick
-      ExplicitLeft = 218
+      ExplicitLeft = 255
       ExplicitTop = -4
     end
     object btnEntrar: TSpeedButton
       Tag = 2
-      Left = 434
+      Left = 438
       Top = 1
-      Width = 73
+      Width = 69
       Height = 63
       Align = alRight
       Caption = 'Entrar'
@@ -208,7 +213,21 @@ object FrmPaginaInicial: TFrmPaginaInicial
       ParentShowHint = False
       ShowHint = False
       OnClick = btnEntrarClick
-      ExplicitLeft = 435
+      ExplicitLeft = 550
+      ExplicitTop = 2
+    end
+    object Label2: TLabel
+      Left = 152
+      Top = 201
+      Width = 524
+      Height = 36
+      Caption = 'Sistema para Controle Financeiro Pessoal'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWhite
+      Font.Height = -32
+      Font.Name = 'Times New Roman'
+      Font.Style = []
+      ParentFont = False
     end
   end
 end
