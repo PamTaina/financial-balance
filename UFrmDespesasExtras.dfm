@@ -257,8 +257,6 @@
     Color = 14737632
     ParentBackground = False
     TabOrder = 1
-    ExplicitLeft = -96
-    ExplicitTop = 57
     object imagemLancamentosDespesasFixas: TImage
       Left = 992
       Top = 434

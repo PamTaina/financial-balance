@@ -23,11 +23,11 @@ object FrmRendaFinanceira: TFrmRendaFinanceira
     Color = 14737632
     ParentBackground = False
     TabOrder = 0
-    ExplicitTop = 65
-    ExplicitHeight = 708
+    ExplicitLeft = 48
+    ExplicitTop = 264
     object pnlRendaFinanceira: TPanel
-      Left = 478
-      Top = 70
+      Left = 496
+      Top = 100
       Width = 497
       Height = 615
       Color = clHighlightText

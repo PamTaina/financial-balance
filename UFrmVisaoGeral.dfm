@@ -1,7 +1,7 @@
-﻿object FrmMetaAnual: TFrmMetaAnual
+﻿object FrmVisaoGeral: TFrmVisaoGeral
   Left = 0
   Top = 0
-  Caption = 'Meta Anual'
+  Caption = 'Vis'#227'o Geral'
   ClientHeight = 878
   ClientWidth = 1440
   Color = clBtnFace
@@ -23,7 +23,7 @@
     Color = 14737632
     ParentBackground = False
     TabOrder = 0
-    ExplicitLeft = -184
+    ExplicitLeft = -144
     ExplicitTop = 71
     object pnlVisãoGeral: TPanel
       Left = 0
@@ -34,7 +34,7 @@
       ParentBackground = False
       TabOrder = 0
       object lbVisãoGeral: TLabel
-        Left = 562
+        Left = 692
         Top = 14
         Width = 113
         Height = 29

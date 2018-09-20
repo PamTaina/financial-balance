@@ -30,6 +30,8 @@ implementation
 
 uses
     UFrmPaginaInicial
+  , UUsuarioLogado
+  , UDialogo
   ;
 
 {$R *.dfm}
@@ -37,7 +39,15 @@ uses
 
 procedure TFrmEntrar.btnEfetuarEntradaClick(Sender: TObject);
 begin
-  FrmPaginaInicial.DefineTelaAtual(taRendaFinanceira);
+  try
+    TUsuarioLogado.RealizaLogin(edCPFCadastro.Text, edSenhaCadastro.Text);
+    FrmPaginaInicial.DefineTelaAtual(taRendaFinanceira);
+  except
+    on E: Exception do
+    begin
+      TDialogo.Excecao(E);
+    end;
+  end;
 end;
 
 end.

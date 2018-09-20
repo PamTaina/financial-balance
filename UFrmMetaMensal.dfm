@@ -2,7 +2,7 @@ object FrmMetaMensal: TFrmMetaMensal
   Left = 0
   Top = 0
   Caption = 'Meta Mensal'
-  ClientHeight = 781
+  ClientHeight = 878
   ClientWidth = 1440
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -18,14 +18,15 @@ object FrmMetaMensal: TFrmMetaMensal
     Left = 0
     Top = 65
     Width = 1440
-    Height = 716
+    Height = 813
     Align = alClient
     Color = 14737632
     ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 1200
     object pnlEntrar: TPanel
-      Left = 517
-      Top = 85
+      Left = 496
+      Top = 99
       Width = 497
       Height = 615
       Color = clHighlightText
@@ -140,8 +141,6 @@ object FrmMetaMensal: TFrmMetaMensal
       Color = 10921555
       ParentBackground = False
       TabOrder = 0
-      ExplicitLeft = 137
-      ExplicitTop = -6
       DesignSize = (
         1438
         65)

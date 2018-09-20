@@ -25,8 +25,6 @@ object FrmPaginaInicial: TFrmPaginaInicial
     Color = 14737632
     ParentBackground = False
     TabOrder = 0
-    ExplicitLeft = -1
-    ExplicitTop = 70
   end
   object pnlCabecalhoPrincipal: TPanel
     Left = 0
@@ -39,7 +37,7 @@ object FrmPaginaInicial: TFrmPaginaInicial
     TabOrder = 1
     object lbFinancialBalance: TLabel
       Left = 24
-      Top = 18
+      Top = 2
       Width = 172
       Height = 29
       Caption = 'Financial Balance'
@@ -50,14 +48,14 @@ object FrmPaginaInicial: TFrmPaginaInicial
       Font.Style = [fsBold]
       ParentFont = False
     end
-    object btnMetaAnual: TSpeedButton
+    object btnVisaoGeral: TSpeedButton
       Tag = 8
       Left = 1234
       Top = 1
       Width = 129
       Height = 63
       Align = alRight
-      Caption = 'Meta Anual'
+      Caption = 'Vis'#227'o Geral'
       Flat = True
       Font.Charset = ANSI_CHARSET
       Font.Color = clWhite
@@ -67,7 +65,7 @@ object FrmPaginaInicial: TFrmPaginaInicial
       ParentFont = False
       ParentShowHint = False
       ShowHint = False
-      OnClick = btnMetaAnualClick
+      OnClick = btnVisaoGeralClick
       ExplicitLeft = 1289
       ExplicitTop = 18
       ExplicitHeight = 29
@@ -171,6 +169,7 @@ object FrmPaginaInicial: TFrmPaginaInicial
       ParentFont = False
       ParentShowHint = False
       ShowHint = False
+      OnClick = btnRendaFinanceiraClick
       ExplicitLeft = 506
     end
     object btnCadastrar: TSpeedButton
@@ -216,17 +215,17 @@ object FrmPaginaInicial: TFrmPaginaInicial
       ExplicitLeft = 550
       ExplicitTop = 2
     end
-    object Label2: TLabel
-      Left = 152
-      Top = 201
-      Width = 524
-      Height = 36
-      Caption = 'Sistema para Controle Financeiro Pessoal'
+    object lbNomeUsuario: TLabel
+      Left = 24
+      Top = 30
+      Width = 95
+      Height = 15
+      Caption = 'Nome do Usu'#225'rio'
       Font.Charset = ANSI_CHARSET
       Font.Color = clWhite
-      Font.Height = -32
-      Font.Name = 'Times New Roman'
-      Font.Style = []
+      Font.Height = -13
+      Font.Name = 'Calibri'
+      Font.Style = [fsBold]
       ParentFont = False
     end
   end

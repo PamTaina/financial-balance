@@ -16,13 +16,12 @@ type
               , taDespesasExtras
               , taMetaDiaria
               , taMetaMensal
-              , taMetaAnual);
+              , taVisaoGeral);
 
   TFrmPaginaInicial = class(TForm)
     pnlFundo: TPanel;
     pnlCabecalhoPrincipal: TPanel;
     lbFinancialBalance: TLabel;
-    btnMetaAnual: TSpeedButton;
     btnMetaMensal: TSpeedButton;
     btnMetaDiaria: TSpeedButton;
     btnDespesasExtras: TSpeedButton;
@@ -30,7 +29,9 @@ type
     btnRendaFinanceira: TSpeedButton;
     btnCadastrar: TSpeedButton;
     btnEntrar: TSpeedButton;
-    Label2: TLabel;
+    btnVisaoGeral: TSpeedButton;
+    lbNomeUsuario: TLabel;
+
     procedure btnCadastrarClick(Sender: TObject);
     procedure btnEntrarClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
@@ -38,7 +39,8 @@ type
     procedure btnDespesasExtrasClick(Sender: TObject);
     procedure btnMetaDiariaClick(Sender: TObject);
     procedure btnMetaMensalClick(Sender: TObject);
-    procedure btnMetaAnualClick(Sender: TObject);
+    procedure btnRendaFinanceiraClick(Sender: TObject);
+    procedure btnVisaoGeralClick(Sender: TObject);
   public
     procedure DefineTelaAtual(const ceTelaAtual: TTelaAtual);
   end;
@@ -58,8 +60,13 @@ uses
  , UFrmDespesasExtras
  , UFrmMetaDiaria
  , UFrmMetaMensal
- , UFrmMetaAnual
+ , UFrmVisaoGeral
  ;
+
+procedure TFrmPaginaInicial.btnVisaoGeralClick(Sender: TObject);
+begin
+  FrmPaginaInicial.DefineTelaAtual(taVisaoGeral);
+end;
 
 procedure TFrmPaginaInicial.btnCadastrarClick(Sender: TObject);
 begin
@@ -81,11 +88,6 @@ begin
   DefineTelaAtual(taEntrar);
 end;
 
-procedure TFrmPaginaInicial.btnMetaAnualClick(Sender: TObject);
-begin
-  FrmPaginaInicial.DefineTelaAtual(taMetaAnual);
-end;
-
 procedure TFrmPaginaInicial.btnMetaDiariaClick(Sender: TObject);
 begin
   FrmPaginaInicial.DefineTelaAtual(taMetaDiaria);
@@ -94,6 +96,11 @@ end;
 procedure TFrmPaginaInicial.btnMetaMensalClick(Sender: TObject);
 begin
   FrmPaginaInicial.DefineTelaAtual(taMetaMensal);
+end;
+
+procedure TFrmPaginaInicial.btnRendaFinanceiraClick(Sender: TObject);
+begin
+  FrmPaginaInicial.DefineTelaAtual(taRendaFinanceira);
 end;
 
 procedure TFrmPaginaInicial.DefineTelaAtual(const ceTelaAtual: TTelaAtual);
@@ -109,7 +116,7 @@ begin
   FrmDespesasExtras.pnlFundo.Parent  := nil;
   FrmMetaDiaria.pnlFundo.Parent      := nil;
   FrmMetaMensal.pnlFundo.Parent      := nil;
-  FrmMetaAnual.pnlFundo.Parent       := nil;
+  FrmVisaoGeral.pnlFundo.Parent      := nil;
 
   case ceTelaAtual of
              taBanner: FrmBanner.pnlFundo.Parent          := pnlFundo;
@@ -120,19 +127,19 @@ begin
      taDespesasExtras: FrmDespesasExtras.pnlFundo.Parent  := pnlFundo;
       taMetaDiaria   : FrmMetaDiaria.pnlFundo.Parent      := pnlFundo;
       taMetaMensal   : FrmMetaMensal.pnlFundo.Parent      := pnlFundo;
-      taMetaAnual    : FrmMetaAnual.pnlFundo.Parent       := pnlFundo;
+      taVisaoGeral   : FrmVisaoGeral.pnlFundo.Parent      := pnlFundo;
 
   end;
 
   btnEntrar.Visible    := ceTelaAtual in [taBanner, taEntrar, taCadastro];
   btnCadastrar.Visible := btnEntrar.Visible;
 
-  btnMetaAnual.Visible       := not (ceTelaAtual in [taBanner, taEntrar, taCadastro]);
-  btnMetaMensal.Visible      := btnMetaAnual.Visible;
-  btnMetaDiaria.Visible      := btnMetaAnual.Visible;
-  btnRendaFinanceira.Visible := btnMetaAnual.Visible;
-  btnDespesasExtras.Visible  := btnMetaAnual.Visible;
-  btnDespesasFixas.Visible   := btnMetaAnual.Visible;
+  btnVisaoGeral.Visible      := not (ceTelaAtual in [taBanner, taEntrar, taCadastro]);
+  btnMetaMensal.Visible      := btnVisaoGeral.Visible;
+  btnMetaDiaria.Visible      := btnVisaoGeral.Visible;
+  btnRendaFinanceira.Visible := btnVisaoGeral.Visible;
+  btnDespesasExtras.Visible  := btnVisaoGeral.Visible;
+  btnDespesasFixas.Visible   := btnVisaoGeral.Visible;
 
   for Indice := 0 to Pred(pnlCabecalhoPrincipal.ControlCount) do
   begin

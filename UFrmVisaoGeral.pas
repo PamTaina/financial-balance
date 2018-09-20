@@ -1,4 +1,4 @@
-unit UFrmMetaAnual;
+unit UFrmVisaoGeral;
 
 interface
 
@@ -8,7 +8,7 @@ uses
   Vcl.Imaging.pngimage, Vcl.Imaging.jpeg;
 
 type
-  TFrmMetaAnual = class(TForm)
+  TFrmVisaoGeral = class(TForm)
     pnlFundo: TPanel;
     pnlCabecalhoPaginaInicial: TPanel;
     Panel1: TPanel;
@@ -38,7 +38,7 @@ type
   end;
 
 var
-  FrmMetaAnual: TFrmMetaAnual;
+  FrmVisaoGeral: TFrmVisaoGeral;
 
 implementation
 
@@ -52,52 +52,52 @@ uses
   , UFrmRendaFinanceira
   ;
 
-procedure TFrmMetaAnual.btnDespesasExtrasTabelaExtraClick(Sender: TObject);
+procedure TFrmVisaoGeral.btnDespesasExtrasTabelaExtraClick(Sender: TObject);
 begin
   FrmDespesasExtras.Show;
 end;
 
-procedure TFrmMetaAnual.btnDespesasExtrasTabelaMetaDiariaClick(Sender: TObject);
+procedure TFrmVisaoGeral.btnDespesasExtrasTabelaMetaDiariaClick(Sender: TObject);
 begin
   FrmDespesasExtras.Show;
 end;
 
-procedure TFrmMetaAnual.btnDespesasFixasTabelaExtraClick(Sender: TObject);
+procedure TFrmVisaoGeral.btnDespesasFixasTabelaExtraClick(Sender: TObject);
 begin
   FrmDespesasFixas.Show;
 end;
 
-procedure TFrmMetaAnual.btnDespesasFixasTabelaMetaDiariaClick(Sender: TObject);
+procedure TFrmVisaoGeral.btnDespesasFixasTabelaMetaDiariaClick(Sender: TObject);
 begin
   FrmDespesasFixas.Show;
 end;
 
-procedure TFrmMetaAnual.btnVisãoGeralClick(Sender: TObject);
+procedure TFrmVisaoGeral.btnVisãoGeralClick(Sender: TObject);
 begin
-  FrmMetaAnual.Show;
+  FrmVisaoGeral.Show;
 end;
 
-procedure TFrmMetaAnual.btnMetaDiariaTabelaExtraClick(Sender: TObject);
-begin
-  FrmMetaDiaria.Show;
-end;
-
-procedure TFrmMetaAnual.btnMetaDiariaTabelaMetaDiariaClick(Sender: TObject);
+procedure TFrmVisaoGeral.btnMetaDiariaTabelaExtraClick(Sender: TObject);
 begin
   FrmMetaDiaria.Show;
 end;
 
-procedure TFrmMetaAnual.btnMetaMensalTabelaExtraClick(Sender: TObject);
+procedure TFrmVisaoGeral.btnMetaDiariaTabelaMetaDiariaClick(Sender: TObject);
+begin
+  FrmMetaDiaria.Show;
+end;
+
+procedure TFrmVisaoGeral.btnMetaMensalTabelaExtraClick(Sender: TObject);
 begin
   FrmMetaMensal.Show;
 end;
 
-procedure TFrmMetaAnual.btnMetaMensalTabelaMetaDiariaClick(Sender: TObject);
+procedure TFrmVisaoGeral.btnMetaMensalTabelaMetaDiariaClick(Sender: TObject);
 begin
   FrmMetaMensal.Show;
 end;
 
-procedure TFrmMetaAnual.btnRendaFinanceiraClick(Sender: TObject);
+procedure TFrmVisaoGeral.btnRendaFinanceiraClick(Sender: TObject);
 begin
   FrmRendaFinanceira.Show;
 end;

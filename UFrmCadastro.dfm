@@ -1,6 +1,7 @@
 object FrmCadastro: TFrmCadastro
   Left = 0
   Top = 0
+  ActiveControl = edNomeCompleto
   Anchors = [akTop, akRight]
   Caption = 'Cadastro'
   ClientHeight = 818
@@ -14,6 +15,8 @@ object FrmCadastro: TFrmCadastro
   OldCreateOrder = False
   Position = poDesigned
   WindowState = wsMaximized
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
   PixelsPerInch = 96
   TextHeight = 13
   object pnlFundo: TPanel
@@ -27,11 +30,9 @@ object FrmCadastro: TFrmCadastro
     ParentBackground = False
     ParentCtl3D = False
     TabOrder = 0
-    ExplicitTop = 65
-    ExplicitHeight = 753
     object pnlCadastro: TPanel
-      Left = 488
-      Top = 69
+      Left = 496
+      Top = 101
       Width = 497
       Height = 615
       Color = clHighlightText
@@ -118,9 +119,22 @@ object FrmCadastro: TFrmCadastro
         Font.Style = []
         ParentFont = False
       end
+      object lbConfirmacaoSenha: TLabel
+        Left = 66
+        Top = 501
+        Width = 172
+        Height = 23
+        Caption = 'Confirma'#231#227'o da Senha'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = 5131854
+        Font.Height = -19
+        Font.Name = 'Calibri'
+        Font.Style = []
+        ParentFont = False
+      end
       object btnInserirCadastro: TSpeedButton
         Left = 194
-        Top = 538
+        Top = 562
         Width = 129
         Height = 29
         Anchors = [akTop, akRight]
@@ -149,9 +163,9 @@ object FrmCadastro: TFrmCadastro
         Font.Style = []
         ParentCtl3D = False
         ParentFont = False
-        TabOrder = 0
+        TabOrder = 1
       end
-      object Edit3: TEdit
+      object edNomeCompleto: TEdit
         Left = 64
         Top = 141
         Width = 361
@@ -168,7 +182,7 @@ object FrmCadastro: TFrmCadastro
         ParentFont = False
         ParentShowHint = False
         ShowHint = False
-        TabOrder = 1
+        TabOrder = 0
       end
       object edEmail: TEdit
         Left = 64
@@ -213,7 +227,24 @@ object FrmCadastro: TFrmCadastro
         Font.Style = []
         ParentCtl3D = False
         ParentFont = False
+        PasswordChar = '*'
         TabOrder = 4
+      end
+      object edConfirmacaoSenha: TEdit
+        Left = 64
+        Top = 527
+        Width = 361
+        Height = 25
+        Ctl3D = False
+        Font.Charset = ANSI_CHARSET
+        Font.Color = 5131854
+        Font.Height = -16
+        Font.Name = 'Calibri'
+        Font.Style = []
+        ParentCtl3D = False
+        ParentFont = False
+        PasswordChar = '*'
+        TabOrder = 5
       end
     end
   end

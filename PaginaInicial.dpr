@@ -10,7 +10,7 @@ uses
   UFrmDespesasExtras in 'UFrmDespesasExtras.pas' {FrmDespesasExtras},
   UFrmMetaDiaria in 'UFrmMetaDiaria.pas' {FrmMetaDiaria},
   UFrmMetaMensal in 'UFrmMetaMensal.pas' {FrmMetaMensal},
-  UFrmMetaAnual in 'UFrmMetaAnual.pas' {FrmMetaAnual},
+  UFrmVisaoGeral in 'UFrmVisaoGeral.pas' {FrmVisaoGeral},
   UFrmAlimentacaoDespesasExtras in 'UFrmAlimentacaoDespesasExtras.pas' {FrmAlimentacaoDespesasExtras},
   UFrmEducacaoDespesasExtras in 'UFrmEducacaoDespesasExtras.pas' {FrmEducacaoDespesasExtras},
   UFrmLazerDespesasExtras in 'UFrmLazerDespesasExtras.pas' {FrmLazerDespesasExtras},
@@ -25,14 +25,27 @@ uses
   UFrmSaudeDespesasFixas in 'UFrmSaudeDespesasFixas.pas' {FrmSaudeDespesasFixa},
   UFrmTransporteDespesasFixas in 'UFrmTransporteDespesasFixas.pas' {FrmTransporteDespesasFixas},
   UFrmOutrosDespesasFixas in 'UFrmOutrosDespesasFixas.pas' {FrmOutrosDespesasFixas},
-  DatabaseModules in 'DatabaseModules.pas' {DatabaseModules1: TDataModule},
-  UFrmBanner in 'UFrmBanner.pas' {FrmBanner};
+  UFrmBanner in 'UFrmBanner.pas' {FrmBanner},
+  UDM in 'Modelo\Persistencia\UDM.pas' {dmEntra21: TDataModule},
+  UMensagens in 'Modelo\UMensagens.pas',
+  UEntidade in 'Modelo\Persistencia\UEntidade.pas',
+  URepositorio in 'Modelo\Persistencia\URepositorio.pas',
+  URepositorioDB in 'Modelo\Persistencia\URepositorioDB.pas',
+  UUsuario in 'Modelo\Persistencia\UUsuario.pas',
+  URegraCRUDUsuario in 'Modelo\Regra\URegraCRUDUsuario.pas',
+  URegraCRUD in 'Modelo\Regra\URegraCRUD.pas',
+  UUtilitarios in 'Modelo\UUtilitarios.pas',
+  URepositorioUsuario in 'Modelo\Persistencia\URepositorioUsuario.pas',
+  UConstantes in 'Modelo\UConstantes.pas',
+  UUsuarioLogado in 'Modelo\UUsuarioLogado.pas',
+  UDialogo in 'Modelo\UDialogo.pas';
 
 {$R *.res}
 
 begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TdmEntra21, dmEntra21);
   Application.CreateForm(TFrmPaginaInicial, FrmPaginaInicial);
   Application.CreateForm(TFrmCadastro, FrmCadastro);
   Application.CreateForm(TFrmEntrar, FrmEntrar);
@@ -41,7 +54,7 @@ begin
   Application.CreateForm(TFrmDespesasExtras, FrmDespesasExtras);
   Application.CreateForm(TFrmMetaDiaria, FrmMetaDiaria);
   Application.CreateForm(TFrmMetaMensal, FrmMetaMensal);
-  Application.CreateForm(TFrmMetaAnual, FrmMetaAnual);
+  Application.CreateForm(TFrmVisaoGeral, FrmVisaoGeral);
   Application.CreateForm(TFrmAlimentacaoDespesasExtras, FrmAlimentacaoDespesasExtras);
   Application.CreateForm(TFrmEducacaoDespesasExtras, FrmEducacaoDespesasExtras);
   Application.CreateForm(TFrmLazerDespesasExtras, FrmLazerDespesasExtras);
@@ -56,7 +69,6 @@ begin
   Application.CreateForm(TFrmSaudeDespesasFixa, FrmSaudeDespesasFixa);
   Application.CreateForm(TFrmTransporteDespesasFixas, FrmTransporteDespesasFixas);
   Application.CreateForm(TFrmOutrosDespesasFixas, FrmOutrosDespesasFixas);
-  Application.CreateForm(TDatabaseModules1, DatabaseModules1);
   Application.CreateForm(TFrmBanner, FrmBanner);
   Application.Run;
 end.

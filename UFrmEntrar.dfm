@@ -23,11 +23,9 @@ object FrmEntrar: TFrmEntrar
     Color = 14737632
     ParentBackground = False
     TabOrder = 0
-    ExplicitTop = 65
-    ExplicitHeight = 709
     object pnlEntrar: TPanel
-      Left = 487
-      Top = 69
+      Left = 496
+      Top = 95
       Width = 497
       Height = 615
       Color = clHighlightText
@@ -121,6 +119,7 @@ object FrmEntrar: TFrmEntrar
         Font.Style = []
         ParentCtl3D = False
         ParentFont = False
+        PasswordChar = '*'
         TabOrder = 1
       end
     end
