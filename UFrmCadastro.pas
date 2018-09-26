@@ -74,7 +74,7 @@ begin
 
     TUsuarioLogado.RealizaLogin(edCPFCadastro.Text, edSenhaCadastro.Text);
 
-    FrmPaginaInicial.DefineTelaAtual(taRendaFinanceira);
+    FrmPaginaInicial.DefineTelaAtual(tfRendaFinanceira);
   except
     on E: Exception do
     begin

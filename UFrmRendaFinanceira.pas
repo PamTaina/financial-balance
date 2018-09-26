@@ -15,10 +15,10 @@ type
     btnInserirRendaFinanceira: TSpeedButton;
     edSalarioFixo: TEdit;
     edSalarioExtra: TEdit;
-    edDataHoraSalarioFixo: TEdit;
-    lbDataHoraSalarioFixo: TLabel;
-    edDataHoraSalarioExtra: TEdit;
-    lbDataHoraSalarioExtra: TLabel;
+    edDataSalarioFixo: TEdit;
+    lbDataSalarioFixo: TLabel;
+    edDataSalarioExtra: TEdit;
+    lbDataSalarioExtra: TLabel;
     procedure btnDespesasFixasClick(Sender: TObject);
     procedure btnDespesasExtrasClick(Sender: TObject);
     procedure btnDespesasFixasTabelaExtraClick(Sender: TObject);

@@ -23,8 +23,6 @@ object FrmMetaDiaria: TFrmMetaDiaria
     Color = 14737632
     ParentBackground = False
     TabOrder = 0
-    ExplicitLeft = -293
-    ExplicitTop = 71
     object pnlEntrar: TPanel
       Left = 496
       Top = 99

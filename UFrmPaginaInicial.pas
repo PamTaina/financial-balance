@@ -5,18 +5,20 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.Buttons, Vcl.StdCtrls,
-  Vcl.Imaging.pngimage;
+  Vcl.Imaging.pngimage
+  , Generics.Collections
+  ;
 
 type
-  TTelaAtual = (taBanner
-              , taCadastro
-              , taEntrar
-              , taRendaFinanceira
-              , taDespesasFixas
-              , taDespesasExtras
-              , taMetaDiaria
-              , taMetaMensal
-              , taVisaoGeral);
+  TTipoFormulario = (tfBanner
+                   , tfCadastro
+                   , tfEntrar
+                   , tfRendaFinanceira
+                   , tfDespesasFixas
+                   , tfDespesasExtras
+                   , tfMetaDiaria
+                   , tfMetaMensal
+                   , tfVisaoGeral);
 
   TFrmPaginaInicial = class(TForm)
     pnlFundo: TPanel;
@@ -41,8 +43,14 @@ type
     procedure btnMetaMensalClick(Sender: TObject);
     procedure btnRendaFinanceiraClick(Sender: TObject);
     procedure btnVisaoGeralClick(Sender: TObject);
+    procedure lbFinancialBalanceClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+    procedure FormDestroy(Sender: TObject);
   public
-    procedure DefineTelaAtual(const ceTelaAtual: TTelaAtual);
+    FDicionarioFormularios: TDictionary<TTipoFormulario, TFormClass>;
+    FFormularioAtual: TForm;
+
+    procedure DefineTelaAtual(const ceTipoFormulario: TTipoFormulario);
   end;
 
 var
@@ -65,81 +73,79 @@ uses
 
 procedure TFrmPaginaInicial.btnVisaoGeralClick(Sender: TObject);
 begin
-  FrmPaginaInicial.DefineTelaAtual(taVisaoGeral);
+  FrmPaginaInicial.DefineTelaAtual(tfVisaoGeral);
 end;
 
 procedure TFrmPaginaInicial.btnCadastrarClick(Sender: TObject);
 begin
-  DefineTelaAtual(taCadastro);
+  DefineTelaAtual(tfCadastro);
 end;
 
 procedure TFrmPaginaInicial.btnDespesasExtrasClick(Sender: TObject);
 begin
-  FrmPaginaInicial.DefineTelaAtual(taDespesasExtras);
+  FrmPaginaInicial.DefineTelaAtual(tfDespesasExtras);
 end;
 
 procedure TFrmPaginaInicial.btnDespesasFixasClick(Sender: TObject);
 begin
-  FrmPaginaInicial.DefineTelaAtual(taDespesasFixas);
+  FrmPaginaInicial.DefineTelaAtual(tfDespesasFixas);
 end;
 
 procedure TFrmPaginaInicial.btnEntrarClick(Sender: TObject);
 begin
-  DefineTelaAtual(taEntrar);
+  DefineTelaAtual(tfEntrar);
 end;
 
 procedure TFrmPaginaInicial.btnMetaDiariaClick(Sender: TObject);
 begin
-  FrmPaginaInicial.DefineTelaAtual(taMetaDiaria);
+  FrmPaginaInicial.DefineTelaAtual(tfMetaDiaria);
 end;
 
 procedure TFrmPaginaInicial.btnMetaMensalClick(Sender: TObject);
 begin
-  FrmPaginaInicial.DefineTelaAtual(taMetaMensal);
+  FrmPaginaInicial.DefineTelaAtual(tfMetaMensal);
 end;
 
 procedure TFrmPaginaInicial.btnRendaFinanceiraClick(Sender: TObject);
 begin
-  FrmPaginaInicial.DefineTelaAtual(taRendaFinanceira);
+  FrmPaginaInicial.DefineTelaAtual(tfRendaFinanceira);
 end;
 
-procedure TFrmPaginaInicial.DefineTelaAtual(const ceTelaAtual: TTelaAtual);
+procedure TFrmPaginaInicial.DefineTelaAtual(const ceTipoFormulario: TTipoFormulario);
 var
   BotaoOpcao: TSpeedButton;
   Indice: Integer;
 begin
-  FrmBanner.pnlFundo.Parent          := nil;
-  FrmEntrar.pnlFundo.Parent          := nil;
-  FrmCadastro.pnlFundo.Parent        := nil;
-  FrmRendaFinanceira.pnlFundo.Parent := nil;
-  FrmDespesasFixas.pnlFundo.Parent   := nil;
-  FrmDespesasExtras.pnlFundo.Parent  := nil;
-  FrmMetaDiaria.pnlFundo.Parent      := nil;
-  FrmMetaMensal.pnlFundo.Parent      := nil;
-  FrmVisaoGeral.pnlFundo.Parent      := nil;
-
-  case ceTelaAtual of
-             taBanner: FrmBanner.pnlFundo.Parent          := pnlFundo;
-             taEntrar: FrmEntrar.pnlFundo.Parent          := pnlFundo;
-           taCadastro: FrmCadastro.pnlFundo.Parent        := pnlFundo;
-    taRendaFinanceira: FrmRendaFinanceira.pnlFundo.Parent := pnlFundo;
-      taDespesasFixas: FrmDespesasFixas.pnlFundo.Parent   := pnlFundo;
-     taDespesasExtras: FrmDespesasExtras.pnlFundo.Parent  := pnlFundo;
-      taMetaDiaria   : FrmMetaDiaria.pnlFundo.Parent      := pnlFundo;
-      taMetaMensal   : FrmMetaMensal.pnlFundo.Parent      := pnlFundo;
-      taVisaoGeral   : FrmVisaoGeral.pnlFundo.Parent      := pnlFundo;
-
+  if Assigned(FFormularioAtual) then
+  begin
+    FreeAndNil(FFormularioAtual);
   end;
 
-  btnEntrar.Visible    := ceTelaAtual in [taBanner, taEntrar, taCadastro];
+  FFormularioAtual := FDicionarioFormularios[ceTipoFormulario].Create(Application);
+
+  case ceTipoFormulario of
+             tfBanner: TFrmBanner(FFormularioAtual).pnlFundo.Parent          := pnlFundo;
+             tfEntrar: TFrmEntrar(FFormularioAtual).pnlFundo.Parent          := pnlFundo;
+           tfCadastro: TFrmCadastro(FFormularioAtual).pnlFundo.Parent        := pnlFundo;
+    tfRendaFinanceira: TFrmRendaFinanceira(FFormularioAtual).pnlFundo.Parent := pnlFundo;
+      tfDespesasFixas: TFrmDespesasFixas(FFormularioAtual).pnlFundo.Parent   := pnlFundo;
+     tfDespesasExtras: TFrmDespesasExtras(FFormularioAtual).pnlFundo.Parent  := pnlFundo;
+         tfMetaDiaria: TFrmMetaDiaria(FFormularioAtual).pnlFundo.Parent      := pnlFundo;
+         tfMetaMensal: TFrmMetaMensal(FFormularioAtual).pnlFundo.Parent      := pnlFundo;
+         tfVisaoGeral: TFrmVisaoGeral(FFormularioAtual).pnlFundo.Parent      := pnlFundo;
+  end;
+
+  btnEntrar.Visible    := ceTipoFormulario in [tfBanner, tfEntrar, tfCadastro];
   btnCadastrar.Visible := btnEntrar.Visible;
 
-  btnVisaoGeral.Visible      := not (ceTelaAtual in [taBanner, taEntrar, taCadastro]);
-  btnMetaMensal.Visible      := btnVisaoGeral.Visible;
-  btnMetaDiaria.Visible      := btnVisaoGeral.Visible;
-  btnRendaFinanceira.Visible := btnVisaoGeral.Visible;
+  btnVisaoGeral.Visible      := not (ceTipoFormulario in [tfBanner, tfEntrar, tfCadastro]);
   btnDespesasExtras.Visible  := btnVisaoGeral.Visible;
   btnDespesasFixas.Visible   := btnVisaoGeral.Visible;
+  btnRendaFinanceira.Visible := btnVisaoGeral.Visible;
+  btnMetaDiaria.Visible      := btnVisaoGeral.Visible;
+  btnMetaMensal.Visible      := btnVisaoGeral.Visible;
+
+
 
   for Indice := 0 to Pred(pnlCabecalhoPrincipal.ControlCount) do
   begin
@@ -155,7 +161,7 @@ begin
     if pnlCabecalhoPrincipal.Controls[Indice] is TSpeedButton then
     begin
       BotaoOpcao := TSpeedButton(pnlCabecalhoPrincipal.Controls[Indice]);
-      if Ord(ceTelaAtual) = BotaoOpcao.Tag then
+      if Ord(ceTipoFormulario) = BotaoOpcao.Tag then
       begin
         BotaoOpcao.Font.Style := [fsBold];
       end
@@ -164,9 +170,34 @@ begin
 
 end;
 
+procedure TFrmPaginaInicial.FormCreate(Sender: TObject);
+begin
+  FDicionarioFormularios := TDictionary<TTipoFormulario, TFormClass>.Create;
+  FDicionarioFormularios.Add(tfBanner, TFrmBanner);
+  FDicionarioFormularios.Add(tfCadastro, TFrmCadastro);
+  FDicionarioFormularios.Add(tfEntrar, TFrmEntrar);
+  FDicionarioFormularios.Add(tfRendaFinanceira, TFrmRendaFinanceira);
+  FDicionarioFormularios.Add(tfDespesasFixas, TFrmDespesasFixas);
+  FDicionarioFormularios.Add(tfDespesasExtras, TFrmDespesasExtras);
+  FDicionarioFormularios.Add(tfMetaDiaria, TFrmMetaDiaria);
+  FDicionarioFormularios.Add(tfMetaMensal, TFrmMetaMensal);
+  FDicionarioFormularios.Add(tfVisaoGeral, TFrmVisaoGeral);
+
+end;
+
+procedure TFrmPaginaInicial.FormDestroy(Sender: TObject);
+begin
+  FreeAndNil(FDicionarioFormularios);
+end;
+
 procedure TFrmPaginaInicial.FormShow(Sender: TObject);
 begin
-  DefineTelaAtual(taBanner);
+  DefineTelaAtual(tfBanner);
+end;
+
+procedure TFrmPaginaInicial.lbFinancialBalanceClick(Sender: TObject);
+begin
+  DefineTelaAtual(tfBanner);
 end;
 
 end.

@@ -1,3 +1,5 @@
+{$DEFINE DEV}
+
 unit UFrmEntrar;
 
 interface
@@ -32,6 +34,7 @@ uses
     UFrmPaginaInicial
   , UUsuarioLogado
   , UDialogo
+
   ;
 
 {$R *.dfm}
@@ -40,8 +43,13 @@ uses
 procedure TFrmEntrar.btnEfetuarEntradaClick(Sender: TObject);
 begin
   try
+    {$IFDEF PROD}
     TUsuarioLogado.RealizaLogin(edCPFCadastro.Text, edSenhaCadastro.Text);
-    FrmPaginaInicial.DefineTelaAtual(taRendaFinanceira);
+    {$ELSE}
+    TUsuarioLogado.RealizaLogin('10053572939', 'pamela123');
+    {$ENDIF}
+    FrmPaginaInicial.DefineTelaAtual(tfRendaFinanceira);
+
   except
     on E: Exception do
     begin

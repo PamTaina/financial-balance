@@ -1,6 +1,7 @@
 object FrmEntrar: TFrmEntrar
   Left = 0
   Top = 0
+  ActiveControl = edCPFCadastro
   Caption = 'Entrar'
   ClientHeight = 774
   ClientWidth = 1103
@@ -25,7 +26,7 @@ object FrmEntrar: TFrmEntrar
     TabOrder = 0
     object pnlEntrar: TPanel
       Left = 496
-      Top = 95
+      Top = 87
       Width = 497
       Height = 615
       Color = clHighlightText

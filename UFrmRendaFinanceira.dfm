@@ -1,6 +1,7 @@
 object FrmRendaFinanceira: TFrmRendaFinanceira
   Left = 0
   Top = 0
+  ActiveControl = edSalarioFixo
   Caption = 'Renda Financeira'
   ClientHeight = 773
   ClientWidth = 1440
@@ -23,11 +24,9 @@ object FrmRendaFinanceira: TFrmRendaFinanceira
     Color = 14737632
     ParentBackground = False
     TabOrder = 0
-    ExplicitLeft = 48
-    ExplicitTop = 264
     object pnlRendaFinanceira: TPanel
       Left = 496
-      Top = 100
+      Top = 92
       Width = 497
       Height = 615
       Color = clHighlightText
@@ -92,12 +91,12 @@ object FrmRendaFinanceira: TFrmRendaFinanceira
         ParentShowHint = False
         ShowHint = False
       end
-      object lbDataHoraSalarioFixo: TLabel
+      object lbDataSalarioFixo: TLabel
         Left = 64
         Top = 231
-        Width = 91
+        Width = 36
         Height = 23
-        Caption = 'Data e Hora'
+        Caption = 'Data'
         Font.Charset = ANSI_CHARSET
         Font.Color = 5131854
         Font.Height = -19
@@ -105,12 +104,12 @@ object FrmRendaFinanceira: TFrmRendaFinanceira
         Font.Style = []
         ParentFont = False
       end
-      object lbDataHoraSalarioExtra: TLabel
+      object lbDataSalarioExtra: TLabel
         Left = 64
         Top = 391
-        Width = 91
+        Width = 40
         Height = 23
-        Caption = 'Data e Hora'
+        Caption = 'Data '
         Font.Charset = ANSI_CHARSET
         Font.Color = 5131854
         Font.Height = -19
@@ -120,7 +119,7 @@ object FrmRendaFinanceira: TFrmRendaFinanceira
       end
       object edSalarioFixo: TEdit
         Left = 64
-        Top = 198
+        Top = 200
         Width = 361
         Height = 25
         Ctl3D = False
@@ -146,9 +145,9 @@ object FrmRendaFinanceira: TFrmRendaFinanceira
         Font.Style = []
         ParentCtl3D = False
         ParentFont = False
-        TabOrder = 1
+        TabOrder = 2
       end
-      object edDataHoraSalarioFixo: TEdit
+      object edDataSalarioFixo: TEdit
         Left = 64
         Top = 263
         Width = 137
@@ -161,9 +160,9 @@ object FrmRendaFinanceira: TFrmRendaFinanceira
         Font.Style = []
         ParentCtl3D = False
         ParentFont = False
-        TabOrder = 2
+        TabOrder = 1
       end
-      object edDataHoraSalarioExtra: TEdit
+      object edDataSalarioExtra: TEdit
         Left = 64
         Top = 423
         Width = 137

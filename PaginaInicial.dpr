@@ -11,7 +11,7 @@ uses
   UFrmMetaDiaria in 'UFrmMetaDiaria.pas' {FrmMetaDiaria},
   UFrmMetaMensal in 'UFrmMetaMensal.pas' {FrmMetaMensal},
   UFrmVisaoGeral in 'UFrmVisaoGeral.pas' {FrmVisaoGeral},
-  UFrmAlimentacaoDespesasExtras in 'UFrmAlimentacaoDespesasExtras.pas' {FrmAlimentacaoDespesasExtras},
+  UFrmTipoDespesa in 'UFrmTipoDespesa.pas' {FrmAlimentacaoDespesasExtras},
   UFrmEducacaoDespesasExtras in 'UFrmEducacaoDespesasExtras.pas' {FrmEducacaoDespesasExtras},
   UFrmLazerDespesasExtras in 'UFrmLazerDespesasExtras.pas' {FrmLazerDespesasExtras},
   UFrmMoradiaDespesasExtras in 'UFrmMoradiaDespesasExtras.pas' {FrmMoradiaDespesasExtras},
@@ -38,7 +38,13 @@ uses
   URepositorioUsuario in 'Modelo\Persistencia\URepositorioUsuario.pas',
   UConstantes in 'Modelo\UConstantes.pas',
   UUsuarioLogado in 'Modelo\UUsuarioLogado.pas',
-  UDialogo in 'Modelo\UDialogo.pas';
+  UDialogo in 'Modelo\UDialogo.pas',
+  UDespesasFinanceiras in 'Modelo\Persistencia\UDespesasFinanceiras.pas',
+  URepositorioDespesasFinanceiras in 'Modelo\Persistencia\URepositorioDespesasFinanceiras.pas',
+  URegraCRUDDespesasFinanceiras in 'Modelo\Regra\URegraCRUDDespesasFinanceiras.pas',
+  URegraCRUDMetas in 'Modelo\Regra\URegraCRUDMetas.pas',
+  UMetas in 'Modelo\Persistencia\UMetas.pas',
+  URepositorioMetas in 'Modelo\Persistencia\URepositorioMetas.pas';
 
 {$R *.res}
 
@@ -47,28 +53,6 @@ begin
   Application.MainFormOnTaskbar := True;
   Application.CreateForm(TdmEntra21, dmEntra21);
   Application.CreateForm(TFrmPaginaInicial, FrmPaginaInicial);
-  Application.CreateForm(TFrmCadastro, FrmCadastro);
-  Application.CreateForm(TFrmEntrar, FrmEntrar);
-  Application.CreateForm(TFrmRendaFinanceira, FrmRendaFinanceira);
-  Application.CreateForm(TFrmDespesasFixas, FrmDespesasFixas);
-  Application.CreateForm(TFrmDespesasExtras, FrmDespesasExtras);
-  Application.CreateForm(TFrmMetaDiaria, FrmMetaDiaria);
-  Application.CreateForm(TFrmMetaMensal, FrmMetaMensal);
-  Application.CreateForm(TFrmVisaoGeral, FrmVisaoGeral);
-  Application.CreateForm(TFrmAlimentacaoDespesasExtras, FrmAlimentacaoDespesasExtras);
-  Application.CreateForm(TFrmEducacaoDespesasExtras, FrmEducacaoDespesasExtras);
-  Application.CreateForm(TFrmLazerDespesasExtras, FrmLazerDespesasExtras);
-  Application.CreateForm(TFrmMoradiaDespesasExtras, FrmMoradiaDespesasExtras);
-  Application.CreateForm(TFrmSaudeDespesasExtras, FrmSaudeDespesasExtras);
-  Application.CreateForm(TFrmTransporteDespesasExtras, FrmTransporteDespesasExtras);
-  Application.CreateForm(TFrmOutrosDespesasExtras, FrmOutrosDespesasExtras);
-  Application.CreateForm(TFrmAlimentacaoDespesasFixas, FrmAlimentacaoDespesasFixas);
-  Application.CreateForm(TFrmEducacaoDespesasFixas, FrmEducacaoDespesasFixas);
-  Application.CreateForm(TFrmLazerDespesasFixas, FrmLazerDespesasFixas);
-  Application.CreateForm(TFrmMoradiaDespesasFixas, FrmMoradiaDespesasFixas);
-  Application.CreateForm(TFrmSaudeDespesasFixa, FrmSaudeDespesasFixa);
-  Application.CreateForm(TFrmTransporteDespesasFixas, FrmTransporteDespesasFixas);
-  Application.CreateForm(TFrmOutrosDespesasFixas, FrmOutrosDespesasFixas);
   Application.CreateForm(TFrmBanner, FrmBanner);
   Application.Run;
 end.

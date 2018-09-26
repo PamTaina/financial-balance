@@ -23,7 +23,6 @@ object FrmMetaMensal: TFrmMetaMensal
     Color = 14737632
     ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 1200
     object pnlEntrar: TPanel
       Left = 496
       Top = 99

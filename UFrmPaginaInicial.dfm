@@ -13,6 +13,8 @@ object FrmPaginaInicial: TFrmPaginaInicial
   Font.Style = []
   OldCreateOrder = False
   WindowState = wsMaximized
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
   OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
@@ -25,6 +27,8 @@ object FrmPaginaInicial: TFrmPaginaInicial
     Color = 14737632
     ParentBackground = False
     TabOrder = 0
+    ExplicitLeft = 202
+    ExplicitTop = 47
   end
   object pnlCabecalhoPrincipal: TPanel
     Left = 0
@@ -37,7 +41,7 @@ object FrmPaginaInicial: TFrmPaginaInicial
     TabOrder = 1
     object lbFinancialBalance: TLabel
       Left = 24
-      Top = 2
+      Top = 12
       Width = 172
       Height = 29
       Caption = 'Financial Balance'
@@ -47,12 +51,13 @@ object FrmPaginaInicial: TFrmPaginaInicial
       Font.Name = 'Calibri'
       Font.Style = [fsBold]
       ParentFont = False
+      OnClick = lbFinancialBalanceClick
     end
     object btnVisaoGeral: TSpeedButton
       Tag = 8
-      Left = 1234
+      Left = 1213
       Top = 1
-      Width = 129
+      Width = 150
       Height = 63
       Align = alRight
       Caption = 'Vis'#227'o Geral'
@@ -66,15 +71,14 @@ object FrmPaginaInicial: TFrmPaginaInicial
       ParentShowHint = False
       ShowHint = False
       OnClick = btnVisaoGeralClick
-      ExplicitLeft = 1289
-      ExplicitTop = 18
-      ExplicitHeight = 29
+      ExplicitLeft = 1219
+      ExplicitTop = -4
     end
     object btnMetaMensal: TSpeedButton
       Tag = 7
-      Left = 1114
+      Left = 1063
       Top = 1
-      Width = 120
+      Width = 150
       Height = 63
       Align = alRight
       Caption = 'Meta Mensal'
@@ -88,14 +92,14 @@ object FrmPaginaInicial: TFrmPaginaInicial
       ParentShowHint = False
       ShowHint = False
       OnClick = btnMetaMensalClick
-      ExplicitLeft = 1108
+      ExplicitLeft = 1057
       ExplicitTop = -4
     end
     object btnMetaDiaria: TSpeedButton
       Tag = 6
-      Left = 989
+      Left = 913
       Top = 1
-      Width = 125
+      Width = 150
       Height = 63
       Align = alRight
       Caption = 'Meta Di'#225'ria'
@@ -109,13 +113,13 @@ object FrmPaginaInicial: TFrmPaginaInicial
       ParentShowHint = False
       ShowHint = False
       OnClick = btnMetaDiariaClick
-      ExplicitLeft = 979
+      ExplicitLeft = 973
     end
     object btnDespesasExtras: TSpeedButton
       Tag = 5
-      Left = 854
+      Left = 763
       Top = 1
-      Width = 135
+      Width = 150
       Height = 63
       Align = alRight
       Caption = 'Despesas Extras'
@@ -129,14 +133,13 @@ object FrmPaginaInicial: TFrmPaginaInicial
       ParentShowHint = False
       ShowHint = False
       OnClick = btnDespesasExtrasClick
-      ExplicitLeft = 860
-      ExplicitTop = -4
+      ExplicitLeft = 843
     end
     object btnDespesasFixas: TSpeedButton
       Tag = 4
-      Left = 686
+      Left = 625
       Top = 1
-      Width = 168
+      Width = 138
       Height = 63
       Align = alRight
       Caption = 'Despesas Fixas'
@@ -150,13 +153,14 @@ object FrmPaginaInicial: TFrmPaginaInicial
       ParentShowHint = False
       ShowHint = False
       OnClick = btnDespesasFixasClick
-      ExplicitLeft = 680
+      ExplicitLeft = 619
+      ExplicitTop = 12
     end
     object btnRendaFinanceira: TSpeedButton
       Tag = 3
-      Left = 507
+      Left = 454
       Top = 1
-      Width = 179
+      Width = 171
       Height = 63
       Align = alRight
       Caption = 'Renda Financeira'
@@ -170,13 +174,13 @@ object FrmPaginaInicial: TFrmPaginaInicial
       ParentShowHint = False
       ShowHint = False
       OnClick = btnRendaFinanceiraClick
-      ExplicitLeft = 506
+      ExplicitLeft = 448
     end
     object btnCadastrar: TSpeedButton
       Tag = 1
-      Left = 312
+      Left = 201
       Top = 1
-      Width = 126
+      Width = 150
       Height = 63
       Align = alRight
       Caption = 'Cadastrar'
@@ -191,14 +195,13 @@ object FrmPaginaInicial: TFrmPaginaInicial
       ShowHint = False
       OnClick = btnCadastrarClick
       OnDblClick = btnCadastrarClick
-      ExplicitLeft = 255
-      ExplicitTop = -4
+      ExplicitLeft = 253
     end
     object btnEntrar: TSpeedButton
       Tag = 2
-      Left = 438
+      Left = 351
       Top = 1
-      Width = 69
+      Width = 103
       Height = 63
       Align = alRight
       Caption = 'Entrar'
@@ -212,12 +215,11 @@ object FrmPaginaInicial: TFrmPaginaInicial
       ParentShowHint = False
       ShowHint = False
       OnClick = btnEntrarClick
-      ExplicitLeft = 550
-      ExplicitTop = 2
+      ExplicitLeft = 360
     end
     object lbNomeUsuario: TLabel
       Left = 24
-      Top = 30
+      Top = 40
       Width = 95
       Height = 15
       Caption = 'Nome do Usu'#225'rio'

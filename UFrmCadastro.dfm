@@ -32,7 +32,7 @@ object FrmCadastro: TFrmCadastro
     TabOrder = 0
     object pnlCadastro: TPanel
       Left = 496
-      Top = 101
+      Top = 85
       Width = 497
       Height = 615
       Color = clHighlightText
@@ -56,7 +56,7 @@ object FrmCadastro: TFrmCadastro
       end
       object Label1: TLabel
         Left = 64
-        Top = 112
+        Top = 96
         Width = 124
         Height = 23
         Caption = 'Nome Completo'
@@ -69,7 +69,7 @@ object FrmCadastro: TFrmCadastro
       end
       object lbCPFCadastro: TLabel
         Left = 64
-        Top = 185
+        Top = 161
         Width = 29
         Height = 23
         Caption = 'CPF'
@@ -82,7 +82,7 @@ object FrmCadastro: TFrmCadastro
       end
       object lbEmail: TLabel
         Left = 64
-        Top = 264
+        Top = 232
         Width = 47
         Height = 23
         Caption = 'E-mail'
@@ -95,7 +95,7 @@ object FrmCadastro: TFrmCadastro
       end
       object lbTelefone: TLabel
         Left = 64
-        Top = 352
+        Top = 304
         Width = 64
         Height = 23
         Caption = 'Telefone'
@@ -108,7 +108,7 @@ object FrmCadastro: TFrmCadastro
       end
       object lbSenhaCadastro: TLabel
         Left = 64
-        Top = 432
+        Top = 376
         Width = 47
         Height = 23
         Caption = 'Senha'
@@ -121,7 +121,7 @@ object FrmCadastro: TFrmCadastro
       end
       object lbConfirmacaoSenha: TLabel
         Left = 66
-        Top = 501
+        Top = 453
         Width = 172
         Height = 23
         Caption = 'Confirma'#231#227'o da Senha'
@@ -152,7 +152,7 @@ object FrmCadastro: TFrmCadastro
       end
       object edCPFCadastro: TEdit
         Left = 64
-        Top = 214
+        Top = 190
         Width = 361
         Height = 25
         Ctl3D = False
@@ -167,7 +167,7 @@ object FrmCadastro: TFrmCadastro
       end
       object edNomeCompleto: TEdit
         Left = 64
-        Top = 141
+        Top = 125
         Width = 361
         Height = 25
         BevelOuter = bvNone
@@ -186,7 +186,7 @@ object FrmCadastro: TFrmCadastro
       end
       object edEmail: TEdit
         Left = 64
-        Top = 293
+        Top = 261
         Width = 361
         Height = 25
         Ctl3D = False
@@ -201,7 +201,7 @@ object FrmCadastro: TFrmCadastro
       end
       object edTelefone: TEdit
         Left = 64
-        Top = 381
+        Top = 333
         Width = 361
         Height = 25
         Ctl3D = False
@@ -216,7 +216,7 @@ object FrmCadastro: TFrmCadastro
       end
       object edSenhaCadastro: TEdit
         Left = 64
-        Top = 461
+        Top = 405
         Width = 361
         Height = 25
         Ctl3D = False
@@ -232,7 +232,7 @@ object FrmCadastro: TFrmCadastro
       end
       object edConfirmacaoSenha: TEdit
         Left = 64
-        Top = 527
+        Top = 482
         Width = 361
         Height = 25
         Ctl3D = False
