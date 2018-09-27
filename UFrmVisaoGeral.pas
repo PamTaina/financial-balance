@@ -29,17 +29,6 @@ type
     Series3: TBarSeries;
     graficoPizzaDespesasFinanceira: TChart;
     Series4: TPieSeries;
-    procedure btnDespesasFixasTabelaMetaDiariaClick(Sender: TObject);
-    procedure btnDespesasExtrasTabelaMetaDiariaClick(Sender: TObject);
-    procedure btnMetaDiariaTabelaMetaDiariaClick(Sender: TObject);
-    procedure btnMetaMensalTabelaMetaDiariaClick(Sender: TObject);
-    procedure btnRendaFinanceiraClick(Sender: TObject);
-    procedure btnDespesasFixasTabelaExtraClick(Sender: TObject);
-    procedure btnDespesasExtrasTabelaExtraClick(Sender: TObject);
-    procedure btnMetaDiariaTabelaExtraClick(Sender: TObject);
-    procedure btnMetaMensalTabelaExtraClick(Sender: TObject);
-    procedure btnVisãoGeralClick(Sender: TObject);
-    procedure lbFinancialBalancePaginaInicialClick(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormShow(Sender: TObject);
     procedure graficoPizzaDespesasFinanceiraClick(Sender: TObject);
@@ -58,60 +47,24 @@ implementation
 
 {$R *.dfm}
 
-uses
-    UFrmDespesasFixas
-  , UFrmDespesasExtras
-  , UFrmMetaDiaria
-  , UFrmMetaMensal
-  , UFrmRendaFinanceira
-  , UFrmPaginaInicial
-  , UDespesasFinanceiras
-  , URepositorioDespesasFinanceiras
-  ;
-
-procedure TFrmVisaoGeral.btnDespesasExtrasTabelaExtraClick(Sender: TObject);
-begin
-  FrmDespesasExtras.Show;
-end;
-
-procedure TFrmVisaoGeral.btnDespesasExtrasTabelaMetaDiariaClick(Sender: TObject);
-begin
-  FrmDespesasExtras.Show;
-end;
-
-procedure TFrmVisaoGeral.btnDespesasFixasTabelaExtraClick(Sender: TObject);
-begin
-  FrmDespesasFixas.Show;
-end;
-
-procedure TFrmVisaoGeral.btnDespesasFixasTabelaMetaDiariaClick(Sender: TObject);
-begin
-  FrmDespesasFixas.Show;
-end;
-
-procedure TFrmVisaoGeral.btnVisãoGeralClick(Sender: TObject);
-begin
-  FrmVisaoGeral.Show;
-end;
-
 procedure TFrmVisaoGeral.CarregaSeries(const Series: TChartSeries);
-var
-  DespesasFinanceiras: TUDespesasFinanceiras;
-  FRepositorioDespesasFinanceiras: TRepositorioDespesasFinanceiras;
+//var
+//  DespesasFinanceiras: TUDespesasFinanceiras;
+//  FRepositorioDespesasFinanceiras: TRepositorioDespesasFinanceiras;
 begin
-  TRepositorioDespesasFinanceiras := TRepositorioDespesasFinanceiras.Create;
-  try
-    Series.Clear;
-    Series.LegendTitle := 'Despesas Financeiras';
+//  TRepositorioDespesasFinanceiras := TRepositorioDespesasFinanceiras.Create;
+//  try
+//    Series.Clear;
+//    Series.LegendTitle := 'Despesas Financeiras';
 
 //    for PILOTO in TRepositorioDespesasFinanceiras.RetornaTodos do
 //    begin
 //      Series.Add(YearsBetween(PILOTO.DATA_NASCIMENTO, now), PILOTO.NOME);
 //    end;
 
-  finally
-    FreeAndNil(TRepositorioDespesasFinanceiras);
-  end;
+//  finally
+//    FreeAndNil(TRepositorioDespesasFinanceiras);
+//  end;
 
 end;
 
@@ -122,53 +75,23 @@ end;
 
 procedure TFrmVisaoGeral.FormShow(Sender: TObject);
 begin
-  graficoPizzaDespesasFinanceira.Click;
+  //graficoPizzaDespesasFinanceira.Click;
 end;
 
 procedure TFrmVisaoGeral.graficoBarrasDespesasFinanceirasClick(Sender: TObject);
 begin
-  cdbPilotoIdade.RemoveAllSeries;
+  //cdbPilotoIdade.RemoveAllSeries;
 
-  FSeriesAtual := cdbPilotoIdade.AddSeries(TBarSeries);
+  //FSeriesAtual := cdbPilotoIdade.AddSeries(TBarSeries);
   CarregaSeries(FSeriesAtual);
 end;
 
 procedure TFrmVisaoGeral.graficoPizzaDespesasFinanceiraClick(Sender: TObject);
 begin
-  cdbPilotoIdade.RemoveAllSeries;
+  //cdbPilotoIdade.RemoveAllSeries;
 
-  FSeriesAtual := cdbPilotoIdade.AddSeries(TBarSeries);
+  //FSeriesAtual := cdbPilotoIdade.AddSeries(TBarSeries);
   CarregaSeries(FSeriesAtual);
-end;
-
-procedure TFrmVisaoGeral.lbFinancialBalancePaginaInicialClick(Sender: TObject);
-begin
-  FrmPaginaInicial.ShowModal;
-end;
-
-procedure TFrmVisaoGeral.btnMetaDiariaTabelaExtraClick(Sender: TObject);
-begin
-  FrmMetaDiaria.Show;
-end;
-
-procedure TFrmVisaoGeral.btnMetaDiariaTabelaMetaDiariaClick(Sender: TObject);
-begin
-  FrmMetaDiaria.Show;
-end;
-
-procedure TFrmVisaoGeral.btnMetaMensalTabelaExtraClick(Sender: TObject);
-begin
-  FrmMetaMensal.Show;
-end;
-
-procedure TFrmVisaoGeral.btnMetaMensalTabelaMetaDiariaClick(Sender: TObject);
-begin
-  FrmMetaMensal.Show;
-end;
-
-procedure TFrmVisaoGeral.btnRendaFinanceiraClick(Sender: TObject);
-begin
-  FrmRendaFinanceira.Show;
 end;
 
 end.

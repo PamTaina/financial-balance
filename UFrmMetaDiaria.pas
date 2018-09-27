@@ -26,16 +26,6 @@ type
     btnDespesasExtrasTabelaExtra: TSpeedButton;
     btnDespesasFixasTabelaExtra: TSpeedButton;
     btnRendaFinanceira: TSpeedButton;
-    procedure btnDespesasExtrasTabelaMetaDiariaClick(Sender: TObject);
-    procedure btnDespesasFixasTabelaMetaDiariaClick(Sender: TObject);
-    procedure btnMetaMensalTabelaMetaDiariaClick(Sender: TObject);
-    procedure btnMetaAnualTabelaMetaDiariaClick(Sender: TObject);
-    procedure btnRendaFinanceiraClick(Sender: TObject);
-    procedure btnDespesasFixasTabelaExtraClick(Sender: TObject);
-    procedure btnDespesasExtrasTabelaExtraClick(Sender: TObject);
-    procedure btnMetaDiariaTabelaExtraClick(Sender: TObject);
-    procedure btnMetaMensalTabelaExtraClick(Sender: TObject);
-    procedure btnMetaAnualTabelaExtraClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -51,62 +41,8 @@ implementation
 
 uses
     UFrmDespesasFixas
-  , UFrmDespesasExtras
-  , UFrmMetaMensal
   , UFrmMetaAnual
   , UFrmRendaFinanceira
   ;
-
-procedure TFrmMetaDiaria.btnDespesasExtrasTabelaExtraClick(Sender: TObject);
-begin
-  FrmDespesasExtras.Show;
-end;
-
-procedure TFrmMetaDiaria.btnDespesasExtrasTabelaMetaDiariaClick(
-  Sender: TObject);
-begin
-  FrmDespesasExtras.Show;
-end;
-
-procedure TFrmMetaDiaria.btnDespesasFixasTabelaExtraClick(Sender: TObject);
-begin
-  FrmDespesasFixas.Show;
-end;
-
-procedure TFrmMetaDiaria.btnDespesasFixasTabelaMetaDiariaClick(Sender: TObject);
-begin
-  FrmDespesasFixas.Show;
-
-end;
-
-procedure TFrmMetaDiaria.btnMetaAnualTabelaExtraClick(Sender: TObject);
-begin
-  FrmMetaAnual.Show;
-end;
-
-procedure TFrmMetaDiaria.btnMetaAnualTabelaMetaDiariaClick(Sender: TObject);
-begin
-  FrmMetaAnual.Show;
-end;
-
-procedure TFrmMetaDiaria.btnMetaDiariaTabelaExtraClick(Sender: TObject);
-begin
-  FrmMetaDiaria.Show;
-end;
-
-procedure TFrmMetaDiaria.btnMetaMensalTabelaExtraClick(Sender: TObject);
-begin
-  FrmMetaMensal.Show;
-end;
-
-procedure TFrmMetaDiaria.btnMetaMensalTabelaMetaDiariaClick(Sender: TObject);
-begin
-  FrmMetaMensal.Show;
-end;
-
-procedure TFrmMetaDiaria.btnRendaFinanceiraClick(Sender: TObject);
-begin
-  FrmRendaFinanceira.Show;
-end;
 
 end.

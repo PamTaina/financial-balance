@@ -85,80 +85,20 @@
             <Form>FrmRendaFinanceira</Form>
             <FormType>dfm</FormType>
         </DCCReference>
-        <DCCReference Include="UFrmDespesasFixas.pas">
-            <Form>FrmDespesasFixas</Form>
+        <DCCReference Include="UFrmDespesas.pas">
+            <Form>FrmDespesas</Form>
             <FormType>dfm</FormType>
         </DCCReference>
-        <DCCReference Include="UFrmDespesasExtras.pas">
-            <Form>FrmDespesasExtras</Form>
-            <FormType>dfm</FormType>
-        </DCCReference>
-        <DCCReference Include="UFrmMetaDiaria.pas">
-            <Form>FrmMetaDiaria</Form>
-            <FormType>dfm</FormType>
-        </DCCReference>
-        <DCCReference Include="UFrmMetaMensal.pas">
-            <Form>FrmMetaMensal</Form>
+        <DCCReference Include="UFrmMetas.pas">
+            <Form>FrmMetas</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="UFrmVisaoGeral.pas">
             <Form>FrmVisaoGeral</Form>
             <FormType>dfm</FormType>
         </DCCReference>
-        <DCCReference Include="UFrmTipoDespesa.pas">
-            <Form>FrmAlimentacaoDespesasExtras</Form>
-            <FormType>dfm</FormType>
-        </DCCReference>
-        <DCCReference Include="UFrmEducacaoDespesasExtras.pas">
-            <Form>FrmEducacaoDespesasExtras</Form>
-            <FormType>dfm</FormType>
-        </DCCReference>
-        <DCCReference Include="UFrmLazerDespesasExtras.pas">
-            <Form>FrmLazerDespesasExtras</Form>
-            <FormType>dfm</FormType>
-        </DCCReference>
-        <DCCReference Include="UFrmMoradiaDespesasExtras.pas">
-            <Form>FrmMoradiaDespesasExtras</Form>
-            <FormType>dfm</FormType>
-        </DCCReference>
-        <DCCReference Include="UFrmSaudeDespesasExtras.pas">
-            <Form>FrmSaudeDespesasExtras</Form>
-            <FormType>dfm</FormType>
-        </DCCReference>
-        <DCCReference Include="UFrmTransporteDespesasExtras.pas">
-            <Form>FrmTransporteDespesasExtras</Form>
-            <FormType>dfm</FormType>
-        </DCCReference>
-        <DCCReference Include="UFrmOutrosDespesasExtras.pas">
-            <Form>FrmOutrosDespesasExtras</Form>
-            <FormType>dfm</FormType>
-        </DCCReference>
-        <DCCReference Include="UFrmAlimentacaoDespesasFixas.pas">
+        <DCCReference Include="UFrmLancamento.pas">
             <Form>FrmAlimentacaoDespesasFixas</Form>
-            <FormType>dfm</FormType>
-        </DCCReference>
-        <DCCReference Include="UFrmEducacaoDespesasFixas.pas">
-            <Form>FrmEducacaoDespesasFixas</Form>
-            <FormType>dfm</FormType>
-        </DCCReference>
-        <DCCReference Include="UFrmLazerDespesasFixas.pas">
-            <Form>FrmLazerDespesasFixas</Form>
-            <FormType>dfm</FormType>
-        </DCCReference>
-        <DCCReference Include="UFrmMoradiaDespesasFixas.pas">
-            <Form>FrmMoradiaDespesasFixas</Form>
-            <FormType>dfm</FormType>
-        </DCCReference>
-        <DCCReference Include="UFrmSaudeDespesasFixas.pas">
-            <Form>FrmSaudeDespesasFixa</Form>
-            <FormType>dfm</FormType>
-        </DCCReference>
-        <DCCReference Include="UFrmTransporteDespesasFixas.pas">
-            <Form>FrmTransporteDespesasFixas</Form>
-            <FormType>dfm</FormType>
-        </DCCReference>
-        <DCCReference Include="UFrmOutrosDespesasFixas.pas">
-            <Form>FrmOutrosDespesasFixas</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="UFrmBanner.pas">
@@ -182,12 +122,11 @@
         <DCCReference Include="Modelo\UConstantes.pas"/>
         <DCCReference Include="Modelo\UUsuarioLogado.pas"/>
         <DCCReference Include="Modelo\UDialogo.pas"/>
-        <DCCReference Include="Modelo\Persistencia\UDespesasFinanceiras.pas"/>
-        <DCCReference Include="Modelo\Persistencia\URepositorioDespesasFinanceiras.pas"/>
-        <DCCReference Include="Modelo\Regra\URegraCRUDDespesasFinanceiras.pas"/>
-        <DCCReference Include="Modelo\Regra\URegraCRUDMetas.pas"/>
-        <DCCReference Include="Modelo\Persistencia\UMetas.pas"/>
-        <DCCReference Include="Modelo\Persistencia\URepositorioMetas.pas"/>
+        <DCCReference Include="Modelo\Persistencia\ULancamento.pas"/>
+        <DCCReference Include="Modelo\Persistencia\URepositorioLancamento.pas"/>
+        <DCCReference Include="Modelo\Regra\URegraCRUDLancamento.pas"/>
+        <DCCReference Include="Modelo\Persistencia\UMeta.pas"/>
+        <DCCReference Include="Modelo\Persistencia\URepositorioMeta.pas"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>

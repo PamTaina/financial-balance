@@ -94,7 +94,7 @@ object FrmMetaDiaria: TFrmMetaDiaria
         Left = 64
         Top = 246
         Width = 361
-        Height = 25
+        Height = 19
         Ctl3D = False
         Font.Charset = ANSI_CHARSET
         Font.Color = 5131854
@@ -109,7 +109,7 @@ object FrmMetaDiaria: TFrmMetaDiaria
         Left = 64
         Top = 323
         Width = 129
-        Height = 25
+        Height = 19
         Ctl3D = False
         Font.Charset = ANSI_CHARSET
         Font.Color = 5131854
@@ -172,7 +172,6 @@ object FrmMetaDiaria: TFrmMetaDiaria
         ParentFont = False
         ParentShowHint = False
         ShowHint = False
-        OnClick = btnMetaAnualTabelaExtraClick
       end
       object btnMetaMensalTabelaExtra: TSpeedButton
         Left = 1152
@@ -190,7 +189,6 @@ object FrmMetaDiaria: TFrmMetaDiaria
         ParentFont = False
         ParentShowHint = False
         ShowHint = False
-        OnClick = btnMetaMensalTabelaExtraClick
       end
       object btnMetaDiariaTabelaExtra: TSpeedButton
         Left = 1017
@@ -208,7 +206,6 @@ object FrmMetaDiaria: TFrmMetaDiaria
         ParentFont = False
         ParentShowHint = False
         ShowHint = False
-        OnClick = btnMetaDiariaTabelaExtraClick
       end
       object btnDespesasExtrasTabelaExtra: TSpeedButton
         Left = 863
@@ -226,7 +223,6 @@ object FrmMetaDiaria: TFrmMetaDiaria
         ParentFont = False
         ParentShowHint = False
         ShowHint = False
-        OnClick = btnDespesasExtrasTabelaExtraClick
       end
       object btnDespesasFixasTabelaExtra: TSpeedButton
         Left = 691
@@ -244,7 +240,6 @@ object FrmMetaDiaria: TFrmMetaDiaria
         ParentFont = False
         ParentShowHint = False
         ShowHint = False
-        OnClick = btnDespesasFixasTabelaExtraClick
       end
       object btnRendaFinanceira: TSpeedButton
         Left = 518
@@ -262,7 +257,6 @@ object FrmMetaDiaria: TFrmMetaDiaria
         ParentFont = False
         ParentShowHint = False
         ShowHint = False
-        OnClick = btnRendaFinanceiraClick
       end
     end
   end

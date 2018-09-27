@@ -1,7 +1,7 @@
-﻿object FrmDespesasExtras: TFrmDespesasExtras
+﻿object FrmDespesas: TFrmDespesas
   Left = 0
   Top = 0
-  Caption = 'FrmDespesasExtras'
+  Caption = 'Despesas'
   ClientHeight = 666
   ClientWidth = 1392
   Color = clBtnFace
@@ -156,7 +156,6 @@
       ParentFont = False
       ParentShowHint = False
       ShowHint = False
-      OnClick = btnMetaAnualTabelaExtraClick
     end
     object btnMetaMensalTabelaExtra: TSpeedButton
       Left = 1158
@@ -174,7 +173,6 @@
       ParentFont = False
       ParentShowHint = False
       ShowHint = False
-      OnClick = btnMetaMensalTabelaExtraClick
     end
     object btnMetaDiariaTabelaExtra: TSpeedButton
       Left = 1023
@@ -192,7 +190,6 @@
       ParentFont = False
       ParentShowHint = False
       ShowHint = False
-      OnClick = btnMetaDiariaTabelaExtraClick
     end
     object btnDespesasExtrasTabelaExtra: TSpeedButton
       Left = 869
@@ -227,7 +224,6 @@
       ParentFont = False
       ParentShowHint = False
       ShowHint = False
-      OnClick = btnDespesasFixasTabelaExtraClick
     end
     object btnRendaFinanceira: TSpeedButton
       Left = 524
@@ -245,7 +241,6 @@
       ParentFont = False
       ParentShowHint = False
       ShowHint = False
-      OnClick = btnRendaFinanceiraClick
     end
   end
   object pnlFundo: TPanel
@@ -2623,7 +2618,6 @@
           6174653A6D6F6469667900323031382D30392D31325430303A34353A34352B30
           303A3030ECA02B150000001974455874536F6674776172650041646F62652049
           6D616765526561647971C9653C0000000049454E44AE426082}
-        OnClick = imagemAdicionarAlimentaçãoExtrasClick
       end
       object imagemAdicionarEducacaoExtras: TImage
         Left = 270
@@ -2692,7 +2686,6 @@
           6174653A6D6F6469667900323031382D30392D31325430303A34353A34352B30
           303A3030ECA02B150000001974455874536F6674776172650041646F62652049
           6D616765526561647971C9653C0000000049454E44AE426082}
-        OnClick = imagemAdicionarEducacaoExtrasClick
       end
       object imagemAdicionarLazerExtras: TImage
         Left = 270
@@ -2761,7 +2754,6 @@
           6174653A6D6F6469667900323031382D30392D31325430303A34353A34352B30
           303A3030ECA02B150000001974455874536F6674776172650041646F62652049
           6D616765526561647971C9653C0000000049454E44AE426082}
-        OnClick = imagemAdicionarLazerExtrasClick
       end
       object imagemAdicionarMoradiaExtras: TImage
         Left = 270
@@ -2830,7 +2822,6 @@
           6174653A6D6F6469667900323031382D30392D31325430303A34353A34352B30
           303A3030ECA02B150000001974455874536F6674776172650041646F62652049
           6D616765526561647971C9653C0000000049454E44AE426082}
-        OnClick = imagemAdicionarMoradiaExtrasClick
       end
       object imagemAdicionarSaudeExtras: TImage
         Left = 270
@@ -2899,7 +2890,6 @@
           6174653A6D6F6469667900323031382D30392D31325430303A34353A34352B30
           303A3030ECA02B150000001974455874536F6674776172650041646F62652049
           6D616765526561647971C9653C0000000049454E44AE426082}
-        OnClick = imagemAdicionarSaudeExtrasClick
       end
       object imagemAdicionarTransporteExtras: TImage
         Left = 270
@@ -2968,7 +2958,6 @@
           6174653A6D6F6469667900323031382D30392D31325430303A34353A34352B30
           303A3030ECA02B150000001974455874536F6674776172650041646F62652049
           6D616765526561647971C9653C0000000049454E44AE426082}
-        OnClick = imagemAdicionarTransporteExtrasClick
       end
       object imagemAdicionarOutrosExtras: TImage
         Left = 270
@@ -3037,7 +3026,6 @@
           6174653A6D6F6469667900323031382D30392D31325430303A34353A34352B30
           303A3030ECA02B150000001974455874536F6674776172650041646F62652049
           6D616765526561647971C9653C0000000049454E44AE426082}
-        OnClick = imagemAdicionarOutrosExtrasClick
       end
     end
     object pnlLançamentos: TPanel

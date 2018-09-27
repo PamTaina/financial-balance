@@ -14,20 +14,16 @@ type
                    , tfCadastro
                    , tfEntrar
                    , tfRendaFinanceira
-                   , tfDespesasFixas
-                   , tfDespesasExtras
-                   , tfMetaDiaria
-                   , tfMetaMensal
+                   , tfDespesas
+                   , tfMetas
                    , tfVisaoGeral);
 
   TFrmPaginaInicial = class(TForm)
     pnlFundo: TPanel;
     pnlCabecalhoPrincipal: TPanel;
     lbFinancialBalance: TLabel;
-    btnMetaMensal: TSpeedButton;
-    btnMetaDiaria: TSpeedButton;
-    btnDespesasExtras: TSpeedButton;
-    btnDespesasFixas: TSpeedButton;
+    btnMetas: TSpeedButton;
+    btnDespesas: TSpeedButton;
     btnRendaFinanceira: TSpeedButton;
     btnCadastrar: TSpeedButton;
     btnEntrar: TSpeedButton;
@@ -37,10 +33,9 @@ type
     procedure btnCadastrarClick(Sender: TObject);
     procedure btnEntrarClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
-    procedure btnDespesasFixasClick(Sender: TObject);
+    procedure btnDespesasClick(Sender: TObject);
     procedure btnDespesasExtrasClick(Sender: TObject);
-    procedure btnMetaDiariaClick(Sender: TObject);
-    procedure btnMetaMensalClick(Sender: TObject);
+    procedure btnMetasClick(Sender: TObject);
     procedure btnRendaFinanceiraClick(Sender: TObject);
     procedure btnVisaoGeralClick(Sender: TObject);
     procedure lbFinancialBalanceClick(Sender: TObject);
@@ -64,10 +59,8 @@ uses
  , UFrmEntrar
  , UFrmBanner
  , UFrmRendaFinanceira
- , UFrmDespesasFixas
- , UFrmDespesasExtras
- , UFrmMetaDiaria
- , UFrmMetaMensal
+ , UFrmDespesas
+ , UFrmMetas
  , UFrmVisaoGeral
  ;
 
@@ -83,12 +76,12 @@ end;
 
 procedure TFrmPaginaInicial.btnDespesasExtrasClick(Sender: TObject);
 begin
-  FrmPaginaInicial.DefineTelaAtual(tfDespesasExtras);
+  FrmPaginaInicial.DefineTelaAtual(tfDespesas);
 end;
 
-procedure TFrmPaginaInicial.btnDespesasFixasClick(Sender: TObject);
+procedure TFrmPaginaInicial.btnDespesasClick(Sender: TObject);
 begin
-  FrmPaginaInicial.DefineTelaAtual(tfDespesasFixas);
+  FrmPaginaInicial.DefineTelaAtual(tfDespesas);
 end;
 
 procedure TFrmPaginaInicial.btnEntrarClick(Sender: TObject);
@@ -96,14 +89,9 @@ begin
   DefineTelaAtual(tfEntrar);
 end;
 
-procedure TFrmPaginaInicial.btnMetaDiariaClick(Sender: TObject);
+procedure TFrmPaginaInicial.btnMetasClick(Sender: TObject);
 begin
-  FrmPaginaInicial.DefineTelaAtual(tfMetaDiaria);
-end;
-
-procedure TFrmPaginaInicial.btnMetaMensalClick(Sender: TObject);
-begin
-  FrmPaginaInicial.DefineTelaAtual(tfMetaMensal);
+  FrmPaginaInicial.DefineTelaAtual(tfMetas);
 end;
 
 procedure TFrmPaginaInicial.btnRendaFinanceiraClick(Sender: TObject);
@@ -128,10 +116,8 @@ begin
              tfEntrar: TFrmEntrar(FFormularioAtual).pnlFundo.Parent          := pnlFundo;
            tfCadastro: TFrmCadastro(FFormularioAtual).pnlFundo.Parent        := pnlFundo;
     tfRendaFinanceira: TFrmRendaFinanceira(FFormularioAtual).pnlFundo.Parent := pnlFundo;
-      tfDespesasFixas: TFrmDespesasFixas(FFormularioAtual).pnlFundo.Parent   := pnlFundo;
-     tfDespesasExtras: TFrmDespesasExtras(FFormularioAtual).pnlFundo.Parent  := pnlFundo;
-         tfMetaDiaria: TFrmMetaDiaria(FFormularioAtual).pnlFundo.Parent      := pnlFundo;
-         tfMetaMensal: TFrmMetaMensal(FFormularioAtual).pnlFundo.Parent      := pnlFundo;
+           tfDespesas: TFrmDespesas(FFormularioAtual).pnlFundo.Parent   := pnlFundo;
+              tfMetas: TFrmMetas(FFormularioAtual).pnlFundo.Parent      := pnlFundo;
          tfVisaoGeral: TFrmVisaoGeral(FFormularioAtual).pnlFundo.Parent      := pnlFundo;
   end;
 
@@ -139,13 +125,9 @@ begin
   btnCadastrar.Visible := btnEntrar.Visible;
 
   btnVisaoGeral.Visible      := not (ceTipoFormulario in [tfBanner, tfEntrar, tfCadastro]);
-  btnDespesasExtras.Visible  := btnVisaoGeral.Visible;
-  btnDespesasFixas.Visible   := btnVisaoGeral.Visible;
+  btnDespesas.Visible        := btnVisaoGeral.Visible;
   btnRendaFinanceira.Visible := btnVisaoGeral.Visible;
-  btnMetaDiaria.Visible      := btnVisaoGeral.Visible;
-  btnMetaMensal.Visible      := btnVisaoGeral.Visible;
-
-
+  btnMetas.Visible           := btnVisaoGeral.Visible;
 
   for Indice := 0 to Pred(pnlCabecalhoPrincipal.ControlCount) do
   begin
@@ -177,10 +159,8 @@ begin
   FDicionarioFormularios.Add(tfCadastro, TFrmCadastro);
   FDicionarioFormularios.Add(tfEntrar, TFrmEntrar);
   FDicionarioFormularios.Add(tfRendaFinanceira, TFrmRendaFinanceira);
-  FDicionarioFormularios.Add(tfDespesasFixas, TFrmDespesasFixas);
-  FDicionarioFormularios.Add(tfDespesasExtras, TFrmDespesasExtras);
-  FDicionarioFormularios.Add(tfMetaDiaria, TFrmMetaDiaria);
-  FDicionarioFormularios.Add(tfMetaMensal, TFrmMetaMensal);
+  FDicionarioFormularios.Add(tfDespesas, TFrmDespesas);
+  FDicionarioFormularios.Add(tfMetas, TFrmMetas);
   FDicionarioFormularios.Add(tfVisaoGeral, TFrmVisaoGeral);
 
 end;

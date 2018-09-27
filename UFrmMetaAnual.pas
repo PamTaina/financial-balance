@@ -21,16 +21,6 @@ type
     btnRendaFinanceira: TSpeedButton;
     pnlVisãoGeral: TPanel;
     lbVisãoGeral: TLabel;
-    procedure btnDespesasFixasTabelaMetaDiariaClick(Sender: TObject);
-    procedure btnDespesasExtrasTabelaMetaDiariaClick(Sender: TObject);
-    procedure btnMetaDiariaTabelaMetaDiariaClick(Sender: TObject);
-    procedure btnMetaMensalTabelaMetaDiariaClick(Sender: TObject);
-    procedure btnRendaFinanceiraClick(Sender: TObject);
-    procedure btnDespesasFixasTabelaExtraClick(Sender: TObject);
-    procedure btnDespesasExtrasTabelaExtraClick(Sender: TObject);
-    procedure btnMetaDiariaTabelaExtraClick(Sender: TObject);
-    procedure btnMetaMensalTabelaExtraClick(Sender: TObject);
-    procedure btnVisãoGeralClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -44,62 +34,5 @@ implementation
 
 {$R *.dfm}
 
-uses
-    UFrmDespesasFixas
-  , UFrmDespesasExtras
-  , UFrmMetaDiaria
-  , UFrmMetaMensal
-  , UFrmRendaFinanceira
-  ;
-
-procedure TFrmMetaAnual.btnDespesasExtrasTabelaExtraClick(Sender: TObject);
-begin
-  FrmDespesasExtras.Show;
-end;
-
-procedure TFrmMetaAnual.btnDespesasExtrasTabelaMetaDiariaClick(Sender: TObject);
-begin
-  FrmDespesasExtras.Show;
-end;
-
-procedure TFrmMetaAnual.btnDespesasFixasTabelaExtraClick(Sender: TObject);
-begin
-  FrmDespesasFixas.Show;
-end;
-
-procedure TFrmMetaAnual.btnDespesasFixasTabelaMetaDiariaClick(Sender: TObject);
-begin
-  FrmDespesasFixas.Show;
-end;
-
-procedure TFrmMetaAnual.btnVisãoGeralClick(Sender: TObject);
-begin
-  FrmMetaAnual.Show;
-end;
-
-procedure TFrmMetaAnual.btnMetaDiariaTabelaExtraClick(Sender: TObject);
-begin
-  FrmMetaDiaria.Show;
-end;
-
-procedure TFrmMetaAnual.btnMetaDiariaTabelaMetaDiariaClick(Sender: TObject);
-begin
-  FrmMetaDiaria.Show;
-end;
-
-procedure TFrmMetaAnual.btnMetaMensalTabelaExtraClick(Sender: TObject);
-begin
-  FrmMetaMensal.Show;
-end;
-
-procedure TFrmMetaAnual.btnMetaMensalTabelaMetaDiariaClick(Sender: TObject);
-begin
-  FrmMetaMensal.Show;
-end;
-
-procedure TFrmMetaAnual.btnRendaFinanceiraClick(Sender: TObject);
-begin
-  FrmRendaFinanceira.Show;
-end;
 
 end.

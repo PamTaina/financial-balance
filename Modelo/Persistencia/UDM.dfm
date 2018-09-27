@@ -33,8 +33,7 @@ object dmEntra21: TdmEntra21
       'MaxBlobSize=-1'
       'DriverName=MySQL'
       'HostName=localhost'
-      'User_Name=Delphi'
-      'Password=senha'
+      'User_Name=delphi'
       'BlobSize=-1'
       'ErrorResourceFile='
       'LocaleCode=0000'
@@ -80,8 +79,8 @@ object dmEntra21: TdmEntra21
         '@123,BlobSize=-1,ErrorResourceFile=,LocaleCode=0000,Compressed=F' +
         'alse,Encrypted=False,ConnectTimeout=60'
       'ServerCharSet=utf8'
-      'Database=financialbalance')
-    Connected = True
+      'Database=financialbalance'
+      'Password=senha')
     Left = 32
     Top = 24
   end

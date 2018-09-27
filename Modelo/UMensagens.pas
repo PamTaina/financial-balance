@@ -41,6 +41,9 @@ resourcestring
   STR_PAIS                    = 'País';
   STR_PAIS_NOME_NAO_INFORMADO = 'Nome do país não foi informado.';
 
+  //Lançamento
+  STR_LANCAMENTO = 'Lançamento';
+
 implementation
 
 end.

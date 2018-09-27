@@ -23,8 +23,6 @@
     Color = 14737632
     ParentBackground = False
     TabOrder = 0
-    ExplicitLeft = -184
-    ExplicitTop = 71
     object pnlVisãoGeral: TPanel
       Left = 0
       Top = 6
@@ -98,7 +96,6 @@
         ParentFont = False
         ParentShowHint = False
         ShowHint = False
-        OnClick = btnVisãoGeralClick
       end
       object btnMetaMensalTabelaExtra: TSpeedButton
         Left = 1152
@@ -116,7 +113,6 @@
         ParentFont = False
         ParentShowHint = False
         ShowHint = False
-        OnClick = btnMetaMensalTabelaExtraClick
       end
       object btnMetaDiariaTabelaExtra: TSpeedButton
         Left = 1017
@@ -134,7 +130,6 @@
         ParentFont = False
         ParentShowHint = False
         ShowHint = False
-        OnClick = btnMetaDiariaTabelaExtraClick
       end
       object btnDespesasExtrasTabelaExtra: TSpeedButton
         Left = 863
@@ -152,7 +147,6 @@
         ParentFont = False
         ParentShowHint = False
         ShowHint = False
-        OnClick = btnDespesasExtrasTabelaExtraClick
       end
       object btnDespesasFixasTabelaExtra: TSpeedButton
         Left = 691
@@ -170,7 +164,6 @@
         ParentFont = False
         ParentShowHint = False
         ShowHint = False
-        OnClick = btnDespesasFixasTabelaExtraClick
       end
       object btnRendaFinanceira: TSpeedButton
         Left = 518
@@ -188,7 +181,6 @@
         ParentFont = False
         ParentShowHint = False
         ShowHint = False
-        OnClick = btnRendaFinanceiraClick
       end
     end
   end

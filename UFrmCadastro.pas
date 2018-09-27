@@ -28,7 +28,6 @@ type
     btnInserirCadastro: TSpeedButton;
     procedure btnInserirCadastroClick(Sender: TObject);
     procedure btnEntrarClick(Sender: TObject);
-    procedure btnAlimentacaoClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
   private
@@ -45,11 +44,10 @@ implementation
 uses
     UFrmPaginaInicial
   , UFrmEntrar
-  , UFrmAlimentacaoDespesasFixas
   , UDialogo
   , UUsuario
   , UUsuarioLogado
-  ;
+  , UFrmLancamento;
 
 
 procedure TFrmCadastro.btnEntrarClick(Sender: TObject);
@@ -91,11 +89,6 @@ end;
 procedure TFrmCadastro.FormDestroy(Sender: TObject);
 begin
   FreeAndNil(FRegraCRUDUsuario);
-end;
-
-procedure TFrmCadastro.btnAlimentacaoClick(Sender: TObject);
-begin
-  FrmAlimentacaoDespesasFixas.Show;
 end;
 
 end.

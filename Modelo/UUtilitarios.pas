@@ -18,6 +18,20 @@ type
                         , touAtualizacao
                         , touExclusao);
 
+  TTipoOperacao = (toRenda = 1
+                 , toDespesa);
+
+  TTipoLancamento = (tlFixa = 1
+                  , tlExtra);
+
+  TTipoDespesa = (tdAlimentacao = 1
+                , tdEducacao
+                , tdLazer
+                , tdMoradia
+                , tdSaude
+                , tdTransporte
+                , tdOutros);
+
   EValidacaoNegocio = class(Exception);
 
   TUtilitario = class

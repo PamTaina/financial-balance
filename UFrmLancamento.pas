@@ -1,11 +1,11 @@
-unit UFrmAlimentacaoDespesasFixas;
+unit UFrmLancamento;
 
 interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Buttons, Vcl.ExtCtrls,
-  Vcl.Imaging.pngimage;
+  Vcl.Imaging.pngimage, Vcl.WinXPickers;
 
 type
   TFrmAlimentacaoDespesasFixas = class(TForm)
@@ -14,15 +14,16 @@ type
     lbDataHoraAlimentacaoFixa: TLabel;
     lbValorAlimentacaoFixa: TLabel;
     btnEfetuarEntrada: TSpeedButton;
-    edDataHoraAlimentacaoFixa: TEdit;
     edAlimentacaoFixa: TEdit;
     pnlCabecalhoPaginaInicial: TPanel;
     btnCadastrar: TSpeedButton;
     btnEntrar: TSpeedButton;
-    lbFinancialBalancePaginaInicial: TLabel;
+    lbTipoLancamento: TLabel;
     lbDescricao: TLabel;
     lbInserirAlimentacaoFixa: TLabel;
     imagemAlimentacao: TImage;
+    DatePicker1: TDatePicker;
+    RadioGroup1: TRadioGroup;
   private
     { Private declarations }
   public

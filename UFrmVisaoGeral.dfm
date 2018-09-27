@@ -68,6 +68,10 @@
         Font.Name = 'Calibri'
         Font.Style = [fsBold]
         ParentFont = False
+        ExplicitLeft = 0
+        ExplicitTop = 0
+        ExplicitWidth = 0
+        ExplicitHeight = 0
         object ComboBox3: TComboBox
           Left = 607
           Top = 55
@@ -114,6 +118,10 @@
         Font.Style = [fsBold]
         ImageIndex = 1
         ParentFont = False
+        ExplicitLeft = 0
+        ExplicitTop = 0
+        ExplicitWidth = 0
+        ExplicitHeight = 0
         object ComboBox1: TComboBox
           Left = 607
           Top = 55
@@ -232,6 +240,8 @@
           Title.Font.Color = 9210950
           Title.Font.Height = -16
           Title.Font.Style = [fsBold]
+          Title.Text.Strings = (
+            'TChart')
           TabOrder = 1
           DefaultCanvas = 'TGDIPlusCanvas'
           ColorPaletteIndex = 13
@@ -253,6 +263,8 @@
           Title.Font.Color = 8421440
           Title.Font.Height = -16
           Title.Font.Style = [fsBold]
+          Title.Text.Strings = (
+            'TChart')
           TabOrder = 2
           DefaultCanvas = 'TGDIPlusCanvas'
           ColorPaletteIndex = 13

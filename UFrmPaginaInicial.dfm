@@ -27,8 +27,6 @@ object FrmPaginaInicial: TFrmPaginaInicial
     Color = 14737632
     ParentBackground = False
     TabOrder = 0
-    ExplicitLeft = 202
-    ExplicitTop = 47
   end
   object pnlCabecalhoPrincipal: TPanel
     Left = 0
@@ -74,14 +72,14 @@ object FrmPaginaInicial: TFrmPaginaInicial
       ExplicitLeft = 1219
       ExplicitTop = -4
     end
-    object btnMetaMensal: TSpeedButton
-      Tag = 7
+    object btnMetas: TSpeedButton
+      Tag = 6
       Left = 1063
       Top = 1
       Width = 150
       Height = 63
       Align = alRight
-      Caption = 'Meta Mensal'
+      Caption = 'Metas'
       Flat = True
       Font.Charset = ANSI_CHARSET
       Font.Color = clWhite
@@ -91,58 +89,17 @@ object FrmPaginaInicial: TFrmPaginaInicial
       ParentFont = False
       ParentShowHint = False
       ShowHint = False
-      OnClick = btnMetaMensalClick
-      ExplicitLeft = 1057
-      ExplicitTop = -4
-    end
-    object btnMetaDiaria: TSpeedButton
-      Tag = 6
-      Left = 913
-      Top = 1
-      Width = 150
-      Height = 63
-      Align = alRight
-      Caption = 'Meta Di'#225'ria'
-      Flat = True
-      Font.Charset = ANSI_CHARSET
-      Font.Color = clWhite
-      Font.Height = -19
-      Font.Name = 'Calibri'
-      Font.Style = []
-      ParentFont = False
-      ParentShowHint = False
-      ShowHint = False
-      OnClick = btnMetaDiariaClick
+      OnClick = btnMetasClick
       ExplicitLeft = 973
     end
-    object btnDespesasExtras: TSpeedButton
-      Tag = 5
-      Left = 763
-      Top = 1
-      Width = 150
-      Height = 63
-      Align = alRight
-      Caption = 'Despesas Extras'
-      Flat = True
-      Font.Charset = ANSI_CHARSET
-      Font.Color = clWhite
-      Font.Height = -19
-      Font.Name = 'Calibri'
-      Font.Style = []
-      ParentFont = False
-      ParentShowHint = False
-      ShowHint = False
-      OnClick = btnDespesasExtrasClick
-      ExplicitLeft = 843
-    end
-    object btnDespesasFixas: TSpeedButton
+    object btnDespesas: TSpeedButton
       Tag = 4
-      Left = 625
+      Left = 925
       Top = 1
       Width = 138
       Height = 63
       Align = alRight
-      Caption = 'Despesas Fixas'
+      Caption = 'Despesas'
       Flat = True
       Font.Charset = ANSI_CHARSET
       Font.Color = clWhite
@@ -152,13 +109,13 @@ object FrmPaginaInicial: TFrmPaginaInicial
       ParentFont = False
       ParentShowHint = False
       ShowHint = False
-      OnClick = btnDespesasFixasClick
+      OnClick = btnDespesasClick
       ExplicitLeft = 619
       ExplicitTop = 12
     end
     object btnRendaFinanceira: TSpeedButton
       Tag = 3
-      Left = 454
+      Left = 754
       Top = 1
       Width = 171
       Height = 63
@@ -178,7 +135,7 @@ object FrmPaginaInicial: TFrmPaginaInicial
     end
     object btnCadastrar: TSpeedButton
       Tag = 1
-      Left = 201
+      Left = 501
       Top = 1
       Width = 150
       Height = 63
@@ -199,7 +156,7 @@ object FrmPaginaInicial: TFrmPaginaInicial
     end
     object btnEntrar: TSpeedButton
       Tag = 2
-      Left = 351
+      Left = 651
       Top = 1
       Width = 103
       Height = 63
