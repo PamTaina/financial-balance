@@ -23,7 +23,7 @@ type
     lbInserirAlimentacaoFixa: TLabel;
     imagemAlimentacao: TImage;
     DatePicker1: TDatePicker;
-    RadioGroup1: TRadioGroup;
+    rgTipoDespesa: TRadioGroup;
   private
     { Private declarations }
   public

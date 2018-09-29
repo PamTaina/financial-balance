@@ -81,7 +81,7 @@ object dmEntra21: TdmEntra21
       'ServerCharSet=utf8'
       'Database=financialbalance'
       'Password=senha')
-    Left = 32
+    Left = 40
     Top = 24
   end
   object SQLSelect: TSQLDataSet

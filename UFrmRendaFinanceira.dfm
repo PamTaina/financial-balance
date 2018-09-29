@@ -24,6 +24,7 @@ object FrmRendaFinanceira: TFrmRendaFinanceira
     Color = 14737632
     ParentBackground = False
     TabOrder = 0
+    ExplicitTop = 8
     object pnlRendaFinanceira: TPanel
       Left = 496
       Top = 92
@@ -149,7 +150,7 @@ object FrmRendaFinanceira: TFrmRendaFinanceira
       end
       object edDataSalarioFixo: TEdit
         Left = 64
-        Top = 263
+        Top = 260
         Width = 137
         Height = 25
         Ctl3D = False
@@ -164,7 +165,7 @@ object FrmRendaFinanceira: TFrmRendaFinanceira
       end
       object edDataSalarioExtra: TEdit
         Left = 64
-        Top = 423
+        Top = 420
         Width = 137
         Height = 25
         Ctl3D = False

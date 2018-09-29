@@ -116,8 +116,8 @@ begin
              tfEntrar: TFrmEntrar(FFormularioAtual).pnlFundo.Parent          := pnlFundo;
            tfCadastro: TFrmCadastro(FFormularioAtual).pnlFundo.Parent        := pnlFundo;
     tfRendaFinanceira: TFrmRendaFinanceira(FFormularioAtual).pnlFundo.Parent := pnlFundo;
-           tfDespesas: TFrmDespesas(FFormularioAtual).pnlFundo.Parent   := pnlFundo;
-              tfMetas: TFrmMetas(FFormularioAtual).pnlFundo.Parent      := pnlFundo;
+           tfDespesas: TFrmDespesas(FFormularioAtual).pnlFundo.Parent        := pnlFundo;
+              tfMetas: TFrmMetas(FFormularioAtual).pnlFundo.Parent           := pnlFundo;
          tfVisaoGeral: TFrmVisaoGeral(FFormularioAtual).pnlFundo.Parent      := pnlFundo;
   end;
 

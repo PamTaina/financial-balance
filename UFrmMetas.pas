@@ -11,12 +11,13 @@ type
   TFrmMetas = class(TForm)
     pnlFundo: TPanel;
     pnlEntrar: TPanel;
-    lbTituloMeta: TLabel;
-    lbValorMetaMensal: TLabel;
-    lbDataHoraMetaMensal: TLabel;
+    lbTituloMetas: TLabel;
+    lbValorMeta: TLabel;
+    lbDataMeta: TLabel;
     btnEfetuarEntradaMetaMensal: TSpeedButton;
-    edValorMetaMensal: TEdit;
-    edDataHoraMetaMensal: TEdit;
+    edValorMeta: TEdit;
+    edDataMeta: TEdit;
+    rgTipoMeta: TRadioGroup;
   private
     { Private declarations }
   public

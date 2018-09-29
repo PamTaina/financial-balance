@@ -9,9 +9,6 @@ uses
 
 type
   TFrmDespesas = class(TForm)
-    pnlCabecalhoPaginaInicial: TPanel;
-    lbFinancialBalancePaginaInicial: TLabel;
-    lbDescricao: TLabel;
     pnlFundo: TPanel;
     imagemLancamentosDespesasFixas: TImage;
     pnlCategorias: TPanel;
@@ -43,12 +40,6 @@ type
     btnDespesasExtras: TSpeedButton;
     SpeedButton5: TSpeedButton;
     btnDespesasFixas: TSpeedButton;
-    btnMetaAnualTabelaExtra: TSpeedButton;
-    btnMetaMensalTabelaExtra: TSpeedButton;
-    btnMetaDiariaTabelaExtra: TSpeedButton;
-    btnDespesasExtrasTabelaExtra: TSpeedButton;
-    btnDespesasFixasTabelaExtra: TSpeedButton;
-    btnRendaFinanceira: TSpeedButton;
   private
     { Private declarations }
   public

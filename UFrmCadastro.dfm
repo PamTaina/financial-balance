@@ -30,6 +30,8 @@ object FrmCadastro: TFrmCadastro
     ParentBackground = False
     ParentCtl3D = False
     TabOrder = 0
+    ExplicitLeft = 8
+    ExplicitTop = -8
     object pnlCadastro: TPanel
       Left = 496
       Top = 85

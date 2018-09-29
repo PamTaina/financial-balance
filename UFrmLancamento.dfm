@@ -203,7 +203,7 @@ object FrmAlimentacaoDespesasFixas: TFrmAlimentacaoDespesasFixas
         Font.Style = []
         TabOrder = 2
       end
-      object RadioGroup1: TRadioGroup
+      object rgTipoDespesa: TRadioGroup
         Left = 34
         Top = 87
         Width = 208

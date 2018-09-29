@@ -102,156 +102,17 @@
     ParentShowHint = False
     ShowHint = False
   end
-  object pnlCabecalhoPaginaInicial: TPanel
+  object pnlFundo: TPanel
     Left = 0
     Top = 0
     Width = 1392
-    Height = 65
-    Align = alTop
-    Color = 10921555
-    ParentBackground = False
-    TabOrder = 0
-    DesignSize = (
-      1392
-      65)
-    object lbFinancialBalancePaginaInicial: TLabel
-      Left = 24
-      Top = 18
-      Width = 172
-      Height = 29
-      Caption = 'Financial Balance'
-      Font.Charset = ANSI_CHARSET
-      Font.Color = clWhite
-      Font.Height = -24
-      Font.Name = 'Calibri'
-      Font.Style = [fsBold]
-      ParentFont = False
-    end
-    object lbDescricao: TLabel
-      Left = 152
-      Top = 201
-      Width = 524
-      Height = 36
-      Caption = 'Sistema para Controle Financeiro Pessoal'
-      Font.Charset = ANSI_CHARSET
-      Font.Color = clWhite
-      Font.Height = -32
-      Font.Name = 'Times New Roman'
-      Font.Style = []
-      ParentFont = False
-    end
-    object btnMetaAnualTabelaExtra: TSpeedButton
-      Left = 1269
-      Top = 18
-      Width = 129
-      Height = 29
-      Anchors = [akTop, akRight]
-      Caption = 'Meta Anual'
-      Flat = True
-      Font.Charset = ANSI_CHARSET
-      Font.Color = clWhite
-      Font.Height = -19
-      Font.Name = 'Calibri'
-      Font.Style = []
-      ParentFont = False
-      ParentShowHint = False
-      ShowHint = False
-    end
-    object btnMetaMensalTabelaExtra: TSpeedButton
-      Left = 1158
-      Top = 18
-      Width = 129
-      Height = 29
-      Anchors = [akTop, akRight]
-      Caption = 'Meta Mensal'
-      Flat = True
-      Font.Charset = ANSI_CHARSET
-      Font.Color = clWhite
-      Font.Height = -19
-      Font.Name = 'Calibri'
-      Font.Style = []
-      ParentFont = False
-      ParentShowHint = False
-      ShowHint = False
-    end
-    object btnMetaDiariaTabelaExtra: TSpeedButton
-      Left = 1023
-      Top = 18
-      Width = 129
-      Height = 29
-      Anchors = [akTop, akRight]
-      Caption = 'Meta Di'#225'ria'
-      Flat = True
-      Font.Charset = ANSI_CHARSET
-      Font.Color = clWhite
-      Font.Height = -19
-      Font.Name = 'Calibri'
-      Font.Style = []
-      ParentFont = False
-      ParentShowHint = False
-      ShowHint = False
-    end
-    object btnDespesasExtrasTabelaExtra: TSpeedButton
-      Left = 869
-      Top = 18
-      Width = 129
-      Height = 29
-      Anchors = [akTop, akRight]
-      Caption = 'Despesas Extras'
-      Flat = True
-      Font.Charset = ANSI_CHARSET
-      Font.Color = clWhite
-      Font.Height = -19
-      Font.Name = 'Calibri'
-      Font.Style = [fsBold]
-      ParentFont = False
-      ParentShowHint = False
-      ShowHint = False
-    end
-    object btnDespesasFixasTabelaExtra: TSpeedButton
-      Left = 697
-      Top = 18
-      Width = 129
-      Height = 29
-      Anchors = [akTop, akRight]
-      Caption = 'Despesas Fixas'
-      Flat = True
-      Font.Charset = ANSI_CHARSET
-      Font.Color = clWhite
-      Font.Height = -19
-      Font.Name = 'Calibri'
-      Font.Style = []
-      ParentFont = False
-      ParentShowHint = False
-      ShowHint = False
-    end
-    object btnRendaFinanceira: TSpeedButton
-      Left = 524
-      Top = 18
-      Width = 146
-      Height = 29
-      Anchors = [akTop, akRight]
-      Caption = 'Renda Financeira'
-      Flat = True
-      Font.Charset = ANSI_CHARSET
-      Font.Color = clWhite
-      Font.Height = -19
-      Font.Name = 'Calibri'
-      Font.Style = []
-      ParentFont = False
-      ParentShowHint = False
-      ShowHint = False
-    end
-  end
-  object pnlFundo: TPanel
-    Left = 0
-    Top = 65
-    Width = 1392
-    Height = 601
+    Height = 666
     Align = alClient
     Color = 14737632
     ParentBackground = False
-    TabOrder = 1
+    TabOrder = 0
+    ExplicitTop = 65
+    ExplicitHeight = 601
     object imagemLancamentosDespesasFixas: TImage
       Left = 992
       Top = 434
@@ -3039,9 +2900,9 @@
       object lbLançamentos: TLabel
         Left = 562
         Top = 14
-        Width = 338
+        Width = 277
         Height = 29
-        Caption = 'Lan'#231'amentos das Despesas Extras'
+        Caption = 'Lan'#231'amentos das Despesas '
         Font.Charset = ANSI_CHARSET
         Font.Color = 5131854
         Font.Height = -24

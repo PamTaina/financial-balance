@@ -14,17 +14,17 @@ uses
 type
   TFrmVisaoGeral = class(TForm)
     pnlFundo: TPanel;
-    pnlVis„oGeral: TPanel;
+    pnlVis√£oGeral: TPanel;
     pgVisaoGeral: TPageControl;
     tbRendaFinanceira: TTabSheet;
     tbDespesasFinanceiras: TTabSheet;
     tbMetas: TTabSheet;
-    lbVis„oGeral: TLabel;
+    lbVis√£oGeral: TLabel;
     cbMesesMetas: TComboBox;
     cbMesesRendaFinanceira: TComboBox;
     graficoBarrasDespesasFinanceiras: TChart;
     Series1: TBarSeries;
-    graficoMetaDi·ria: TChart;
+    graficoMetaDi√°ria: TChart;
     graficoMetaMensal: TChart;
     Series2: TBarSeries;
     Series3: TBarSeries;

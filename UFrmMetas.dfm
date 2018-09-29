@@ -23,11 +23,10 @@ object FrmMetas: TFrmMetas
     Color = 14737632
     ParentBackground = False
     TabOrder = 0
-    ExplicitTop = 65
-    ExplicitHeight = 813
+    ExplicitTop = 8
     object pnlEntrar: TPanel
-      Left = 496
-      Top = 99
+      Left = 536
+      Top = 131
       Width = 497
       Height = 615
       Color = clHighlightText
@@ -36,12 +35,12 @@ object FrmMetas: TFrmMetas
       DesignSize = (
         497
         615)
-      object lbTituloMeta: TLabel
-        Left = 194
+      object lbTituloMetas: TLabel
+        Left = 210
         Top = 32
-        Width = 53
+        Width = 63
         Height = 29
-        Caption = 'Meta'
+        Caption = 'Metas'
         Font.Charset = ANSI_CHARSET
         Font.Color = 5131854
         Font.Height = -24
@@ -49,9 +48,9 @@ object FrmMetas: TFrmMetas
         Font.Style = [fsBold]
         ParentFont = False
       end
-      object lbValorMetaMensal: TLabel
-        Left = 64
-        Top = 217
+      object lbValorMeta: TLabel
+        Left = 80
+        Top = 309
         Width = 40
         Height = 23
         Caption = 'Valor'
@@ -62,12 +61,12 @@ object FrmMetas: TFrmMetas
         Font.Style = []
         ParentFont = False
       end
-      object lbDataHoraMetaMensal: TLabel
-        Left = 64
-        Top = 294
-        Width = 91
+      object lbDataMeta: TLabel
+        Left = 80
+        Top = 386
+        Width = 40
         Height = 23
-        Caption = 'Data e Hora'
+        Caption = 'Data '
         Font.Charset = ANSI_CHARSET
         Font.Color = 5131854
         Font.Height = -19
@@ -76,8 +75,8 @@ object FrmMetas: TFrmMetas
         ParentFont = False
       end
       object btnEfetuarEntradaMetaMensal: TSpeedButton
-        Left = 194
-        Top = 538
+        Left = 178
+        Top = 546
         Width = 129
         Height = 29
         Anchors = [akTop, akRight]
@@ -92,9 +91,9 @@ object FrmMetas: TFrmMetas
         ParentShowHint = False
         ShowHint = False
       end
-      object edValorMetaMensal: TEdit
-        Left = 64
-        Top = 246
+      object edValorMeta: TEdit
+        Left = 80
+        Top = 338
         Width = 361
         Height = 25
         Ctl3D = False
@@ -107,9 +106,9 @@ object FrmMetas: TFrmMetas
         ParentFont = False
         TabOrder = 0
       end
-      object edDataHoraMetaMensal: TEdit
-        Left = 64
-        Top = 323
+      object edDataMeta: TEdit
+        Left = 80
+        Top = 415
         Width = 129
         Height = 25
         Ctl3D = False
@@ -121,6 +120,27 @@ object FrmMetas: TFrmMetas
         ParentCtl3D = False
         ParentFont = False
         TabOrder = 1
+      end
+      object rgTipoMeta: TRadioGroup
+        Left = 80
+        Top = 147
+        Width = 321
+        Height = 113
+        Caption = 'Tipo Meta'
+        Color = clWhite
+        Columns = 2
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clBlack
+        Font.Height = -19
+        Font.Name = 'Calibri'
+        Font.Style = []
+        Items.Strings = (
+          'Fixa'
+          'Extra')
+        ParentBackground = False
+        ParentColor = False
+        ParentFont = False
+        TabOrder = 2
       end
     end
   end

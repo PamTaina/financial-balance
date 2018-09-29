@@ -46,7 +46,7 @@ begin
     {$IFDEF PROD}
     TUsuarioLogado.RealizaLogin(edCPFCadastro.Text, edSenhaCadastro.Text);
     {$ELSE}
-    TUsuarioLogado.RealizaLogin('10053572939', 'pamela123');
+    TUsuarioLogado.RealizaLogin('12345678910', 'adminadmin');
     {$ENDIF}
     FrmPaginaInicial.DefineTelaAtual(tfRendaFinanceira);
 

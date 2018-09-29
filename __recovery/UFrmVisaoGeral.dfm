@@ -113,7 +113,7 @@
         end
         object dbgRendaExtra: TDBGrid
           Left = 96
-          Top = 320
+          Top = 328
           Width = 745
           Height = 193
           TabOrder = 2
