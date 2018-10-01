@@ -60,13 +60,24 @@ const
 const
   CNT_IMAGE_TIPO_DESPESA: array[TTipoDespesa] of String =
   (
-    'Alimentação.png',
-    '',
-    '',
-    '',
-    '',
-    '',
-    ''
+    'Alimentacao.png',
+    'Educacao.png',
+    'Lazer.jpg',
+    'Moradia.png',
+    'Saude.png',
+    'Transporte.jpg',
+    'Outros.png'
+  );
+
+  CNT_DESCRICAO_TIPO_DESPESA:array[TTipoDespesa] of String =
+  (
+    'Alimentacao',
+    'Educacao',
+    'Lazer',
+    'Moradia',
+    'Saude',
+    'Transporte',
+    'Outros'
   );
 
 implementation

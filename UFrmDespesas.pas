@@ -40,6 +40,7 @@ type
     btnDespesasExtras: TSpeedButton;
     SpeedButton5: TSpeedButton;
     btnDespesasFixas: TSpeedButton;
+    procedure imTipoDespesaClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -51,6 +52,24 @@ var
 
 implementation
 
+uses
+    UFrmLancamento
+  , UUtilitarios
+  ;
+
 {$R *.dfm}
+
+procedure TFrmDespesas.imTipoDespesaClick(Sender: TObject);
+var
+  FrmLancamento: TFrmLancamento;
+begin
+  FrmLancamento := TFrmLancamento.Create(Self);
+  try
+    FrmLancamento.TIPO_DESPESA := TTipoDespesa(TImage(Sender).Tag);
+    FrmLancamento.ShowModal;
+  finally
+    FreeAndNil(FrmLancamento);
+  end;
+end;
 
 end.

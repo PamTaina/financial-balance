@@ -3,7 +3,7 @@
   Top = 0
   Caption = 'Despesas'
   ClientHeight = 666
-  ClientWidth = 1392
+  ClientWidth = 1024
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -13,7 +13,7 @@
   OldCreateOrder = False
   WindowState = wsMaximized
   DesignSize = (
-    1392
+    1024
     666)
   PixelsPerInch = 96
   TextHeight = 13
@@ -105,14 +105,12 @@
   object pnlFundo: TPanel
     Left = 0
     Top = 0
-    Width = 1392
+    Width = 1024
     Height = 666
     Align = alClient
     Color = 14737632
     ParentBackground = False
     TabOrder = 0
-    ExplicitTop = 65
-    ExplicitHeight = 601
     object imagemLancamentosDespesasFixas: TImage
       Left = 992
       Top = 434
@@ -2413,6 +2411,7 @@
           5430303A30393A32392B30303A3030478ADBEA0000000049454E44AE426082}
       end
       object imagemAdicionarAlimentaçãoExtras: TImage
+        Tag = 1
         Left = 270
         Top = 25
         Width = 33
@@ -2479,8 +2478,10 @@
           6174653A6D6F6469667900323031382D30392D31325430303A34353A34352B30
           303A3030ECA02B150000001974455874536F6674776172650041646F62652049
           6D616765526561647971C9653C0000000049454E44AE426082}
+        OnClick = imTipoDespesaClick
       end
       object imagemAdicionarEducacaoExtras: TImage
+        Tag = 2
         Left = 270
         Top = 84
         Width = 33
@@ -2547,8 +2548,10 @@
           6174653A6D6F6469667900323031382D30392D31325430303A34353A34352B30
           303A3030ECA02B150000001974455874536F6674776172650041646F62652049
           6D616765526561647971C9653C0000000049454E44AE426082}
+        OnClick = imTipoDespesaClick
       end
       object imagemAdicionarLazerExtras: TImage
+        Tag = 3
         Left = 270
         Top = 144
         Width = 33
@@ -2615,8 +2618,10 @@
           6174653A6D6F6469667900323031382D30392D31325430303A34353A34352B30
           303A3030ECA02B150000001974455874536F6674776172650041646F62652049
           6D616765526561647971C9653C0000000049454E44AE426082}
+        OnClick = imTipoDespesaClick
       end
       object imagemAdicionarMoradiaExtras: TImage
+        Tag = 4
         Left = 270
         Top = 205
         Width = 33
@@ -2683,8 +2688,10 @@
           6174653A6D6F6469667900323031382D30392D31325430303A34353A34352B30
           303A3030ECA02B150000001974455874536F6674776172650041646F62652049
           6D616765526561647971C9653C0000000049454E44AE426082}
+        OnClick = imTipoDespesaClick
       end
       object imagemAdicionarSaudeExtras: TImage
+        Tag = 5
         Left = 270
         Top = 267
         Width = 33
@@ -2751,8 +2758,10 @@
           6174653A6D6F6469667900323031382D30392D31325430303A34353A34352B30
           303A3030ECA02B150000001974455874536F6674776172650041646F62652049
           6D616765526561647971C9653C0000000049454E44AE426082}
+        OnClick = imTipoDespesaClick
       end
       object imagemAdicionarTransporteExtras: TImage
+        Tag = 6
         Left = 270
         Top = 326
         Width = 33
@@ -2819,8 +2828,10 @@
           6174653A6D6F6469667900323031382D30392D31325430303A34353A34352B30
           303A3030ECA02B150000001974455874536F6674776172650041646F62652049
           6D616765526561647971C9653C0000000049454E44AE426082}
+        OnClick = imTipoDespesaClick
       end
       object imagemAdicionarOutrosExtras: TImage
+        Tag = 7
         Left = 270
         Top = 384
         Width = 33
@@ -2887,6 +2898,7 @@
           6174653A6D6F6469667900323031382D30392D31325430303A34353A34352B30
           303A3030ECA02B150000001974455874536F6674776172650041646F62652049
           6D616765526561647971C9653C0000000049454E44AE426082}
+        OnClick = imTipoDespesaClick
       end
     end
     object pnlLançamentos: TPanel

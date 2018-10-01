@@ -13,6 +13,8 @@ object FrmRendaFinanceira: TFrmRendaFinanceira
   Font.Style = []
   OldCreateOrder = False
   WindowState = wsMaximized
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
   PixelsPerInch = 96
   TextHeight = 13
   object pnlFundo: TPanel

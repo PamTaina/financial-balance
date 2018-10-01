@@ -9,7 +9,7 @@ uses
   UFrmDespesas in 'UFrmDespesas.pas' {FrmDespesas},
   UFrmMetas in 'UFrmMetas.pas' {FrmMetas},
   UFrmVisaoGeral in 'UFrmVisaoGeral.pas' {FrmVisaoGeral},
-  UFrmLancamento in 'UFrmLancamento.pas' {FrmAlimentacaoDespesasFixas},
+  UFrmLancamento in 'UFrmLancamento.pas' {FrmLancamento},
   UFrmBanner in 'UFrmBanner.pas' {FrmBanner},
   UDM in 'Modelo\Persistencia\UDM.pas' {dmEntra21: TDataModule},
   UMensagens in 'Modelo\UMensagens.pas',

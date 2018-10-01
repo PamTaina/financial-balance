@@ -16,7 +16,7 @@ type
     lbDataHoraAlimentacaoFixa: TLabel;
     lbValorAlimentacaoFixa: TLabel;
     btnEfetuarEntrada: TSpeedButton;
-    edAlimentacaoFixa: TEdit;
+    edValordespesa: TEdit;
     pnlCabecalhoPaginaInicial: TPanel;
     btnCadastrar: TSpeedButton;
     btnEntrar: TSpeedButton;
@@ -27,6 +27,7 @@ type
     dpDataDespesa: TDatePicker;
     rgTipoDespesa: TRadioGroup;
     procedure lbInserirAlimentacaoFixaClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
     FTipoDespesa: TTipoDespesa;
 
@@ -43,9 +44,15 @@ implementation
 {$R *.dfm}
 
 uses
-    ULANCAMENTO
+  UFrmPaginaInicial
+  , UFrmEntrar
+  , UDialogo
+  , UUsuario
+  , UUsuarioLogado
+  , URepositorioLancamento
+  , ULancamento
   ;
-
+  
 { TFrmAlimentacaoDespesasFixas }
 
 procedure TFrmLancamento.DefineTipoDespesa(
@@ -57,12 +64,22 @@ begin
   imTipoDespesa.Picture.LoadFromFile(ParamStr(0) + '\imagens\' + CNT_IMAGE_TIPO_DESPESA[FTipoDespesa]);
 end;
 
+procedure TFrmLancamento.FormCreate(Sender: TObject);
+begin
+
+end;
+
 procedure TFrmLancamento.lbInserirAlimentacaoFixaClick(
   Sender: TObject);
 var
   LANCAMENTO: TLANCAMENTO;
 begin
   LANCAMENTO := TLANCAMENTO.Create;
+
+    LANCAMENTO.TIPO_LANCAMENTO := TTipoLancamento(rgTipoDespesa.ItemIndex);
+    LANCAMENTO.VALOR           := StrToFloat(edValordespesa.Text);
+    LANCAMENTO.DATA            := dpDataDespesa.Date;
+    LANCAMENTO.TIPO_OPERACAO   := toDespesa;
 
 end;
 

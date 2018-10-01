@@ -98,7 +98,7 @@
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="UFrmLancamento.pas">
-            <Form>FrmAlimentacaoDespesasFixas</Form>
+            <Form>FrmLancamento</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="UFrmBanner.pas">
