@@ -32,6 +32,7 @@ uses
   , UMensagens
   , UConstantes
   , UUsuarioLogado
+  , ULancamento
   ;
 
 constructor TRegraCRUDLancamento.Create;
@@ -58,6 +59,13 @@ end;
 procedure TRegraCRUDLancamento.ValidaInsercao(const coENTIDADE: TENTIDADE);
 begin
   inherited;
+  with TLANCAMENTO(coENTIDADE) do
+  begin
+    if VALOR = 0 Then
+      raise EValidacaoNegocio.Create(STR_VALOR_NAO_INFORMADO);
+
+
+  end;
 end;
 
 end.

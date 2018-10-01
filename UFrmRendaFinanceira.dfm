@@ -1,10 +1,10 @@
 object FrmRendaFinanceira: TFrmRendaFinanceira
   Left = 0
   Top = 0
-  ActiveControl = edSalarioFixo
+  ActiveControl = edValorRenda
   Caption = 'Renda Financeira'
-  ClientHeight = 773
-  ClientWidth = 1440
+  ClientHeight = 746
+  ClientWidth = 1024
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -18,13 +18,12 @@ object FrmRendaFinanceira: TFrmRendaFinanceira
   object pnlFundo: TPanel
     Left = 0
     Top = 0
-    Width = 1440
-    Height = 773
+    Width = 1024
+    Height = 746
     Align = alClient
     Color = 14737632
     ParentBackground = False
     TabOrder = 0
-    ExplicitTop = 8
     object pnlRendaFinanceira: TPanel
       Left = 496
       Top = 92
@@ -52,22 +51,9 @@ object FrmRendaFinanceira: TFrmRendaFinanceira
       object lbSalarioFixo: TLabel
         Left = 64
         Top = 169
-        Width = 86
+        Width = 40
         Height = 23
-        Caption = 'Sal'#225'rio Fixo'
-        Font.Charset = ANSI_CHARSET
-        Font.Color = 5131854
-        Font.Height = -19
-        Font.Name = 'Calibri'
-        Font.Style = []
-        ParentFont = False
-      end
-      object lbSalarioExtra: TLabel
-        Left = 64
-        Top = 329
-        Width = 95
-        Height = 23
-        Caption = 'Sal'#225'rio Extra'
+        Caption = 'Valor'
         Font.Charset = ANSI_CHARSET
         Font.Color = 5131854
         Font.Height = -19
@@ -91,6 +77,7 @@ object FrmRendaFinanceira: TFrmRendaFinanceira
         ParentFont = False
         ParentShowHint = False
         ShowHint = False
+        OnClick = btnInserirRendaFinanceiraClick
       end
       object lbDataSalarioFixo: TLabel
         Left = 64
@@ -105,20 +92,7 @@ object FrmRendaFinanceira: TFrmRendaFinanceira
         Font.Style = []
         ParentFont = False
       end
-      object lbDataSalarioExtra: TLabel
-        Left = 64
-        Top = 391
-        Width = 40
-        Height = 23
-        Caption = 'Data '
-        Font.Charset = ANSI_CHARSET
-        Font.Color = 5131854
-        Font.Height = -19
-        Font.Name = 'Calibri'
-        Font.Style = []
-        ParentFont = False
-      end
-      object edSalarioFixo: TEdit
+      object edValorRenda: TEdit
         Left = 64
         Top = 200
         Width = 361
@@ -133,50 +107,39 @@ object FrmRendaFinanceira: TFrmRendaFinanceira
         ParentFont = False
         TabOrder = 0
       end
-      object edSalarioExtra: TEdit
+      object rgTipoLancamento: TRadioGroup
         Left = 64
-        Top = 358
+        Top = 87
         Width = 361
-        Height = 25
+        Height = 62
+        Caption = ' Tipo Lan'#231'amento '
+        Columns = 2
         Ctl3D = False
         Font.Charset = ANSI_CHARSET
-        Font.Color = 5131854
-        Font.Height = -16
+        Font.Color = clBlack
+        Font.Height = -19
         Font.Name = 'Calibri'
         Font.Style = []
-        ParentCtl3D = False
-        ParentFont = False
-        TabOrder = 2
-      end
-      object edDataSalarioFixo: TEdit
-        Left = 64
-        Top = 260
-        Width = 137
-        Height = 25
-        Ctl3D = False
-        Font.Charset = ANSI_CHARSET
-        Font.Color = 5131854
-        Font.Height = -16
-        Font.Name = 'Calibri'
-        Font.Style = []
+        ItemIndex = 0
+        Items.Strings = (
+          'Fixa'
+          'Extra')
         ParentCtl3D = False
         ParentFont = False
         TabOrder = 1
       end
-      object edDataSalarioExtra: TEdit
+      object dpData: TDatePicker
         Left = 64
-        Top = 420
-        Width = 137
-        Height = 25
-        Ctl3D = False
-        Font.Charset = ANSI_CHARSET
-        Font.Color = 5131854
+        Top = 260
+        Width = 207
+        Date = 43369.000000000000000000
+        DateFormat = 'dd/MM/yyyy'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
         Font.Height = -16
-        Font.Name = 'Calibri'
+        Font.Name = 'Segoe UI'
         Font.Style = []
-        ParentCtl3D = False
-        ParentFont = False
-        TabOrder = 3
+        TabOrder = 2
       end
     end
   end

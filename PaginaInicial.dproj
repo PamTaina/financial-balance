@@ -127,6 +127,8 @@
         <DCCReference Include="Modelo\Regra\URegraCRUDLancamento.pas"/>
         <DCCReference Include="Modelo\Persistencia\UMeta.pas"/>
         <DCCReference Include="Modelo\Persistencia\URepositorioMeta.pas"/>
+        <DCCReference Include="Modelo\Regra\UListaVisualizacao.pas"/>
+        <DCCReference Include="Modelo\Regra\UOpcaoPesquisa.pas"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>

@@ -28,7 +28,9 @@ uses
   URepositorioLancamento in 'Modelo\Persistencia\URepositorioLancamento.pas',
   URegraCRUDLancamento in 'Modelo\Regra\URegraCRUDLancamento.pas',
   UMeta in 'Modelo\Persistencia\UMeta.pas',
-  URepositorioMeta in 'Modelo\Persistencia\URepositorioMeta.pas';
+  URepositorioMeta in 'Modelo\Persistencia\URepositorioMeta.pas',
+  UListaVisualizacao in 'Modelo\Regra\UListaVisualizacao.pas',
+  UOpcaoPesquisa in 'Modelo\Regra\UOpcaoPesquisa.pas';
 
 {$R *.res}
 
