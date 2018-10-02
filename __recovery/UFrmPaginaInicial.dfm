@@ -27,7 +27,8 @@ object FrmPaginaInicial: TFrmPaginaInicial
     Color = 14737632
     ParentBackground = False
     TabOrder = 0
-    ExplicitTop = 70
+    ExplicitLeft = 8
+    ExplicitTop = 113
   end
   object pnlCabecalhoPrincipal: TPanel
     Left = 0
