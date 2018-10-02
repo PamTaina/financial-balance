@@ -109,6 +109,13 @@ CREATE TABLE `usuario` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
+-- Extraindo dados da tabela `usuario`
+--
+
+INSERT INTO `lancamento` (`id`, `nome_completo`, `cpf`, `email`, `telefone`, `senha`) VALUES
+(1, `Administrador`, `12345678910`, `administrador@financialbalance.com`, `479989642248`, `F6FDFFE48C908DEB0F4C3BD36C032E72`);
+
+--
 -- Indexes for dumped tables
 --
 
