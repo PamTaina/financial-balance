@@ -8,6 +8,7 @@ uses
   , UEntidade
   , UUsuario
   , URepositorioLancamento
+  , UMeta
   ;
 
 type

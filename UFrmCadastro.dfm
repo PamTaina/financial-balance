@@ -4,8 +4,8 @@ object FrmCadastro: TFrmCadastro
   ActiveControl = edNomeCompleto
   Anchors = [akTop, akRight]
   Caption = 'Cadastro'
-  ClientHeight = 818
-  ClientWidth = 1313
+  ClientHeight = 746
+  ClientWidth = 1024
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -22,16 +22,14 @@ object FrmCadastro: TFrmCadastro
   object pnlFundo: TPanel
     Left = 0
     Top = 0
-    Width = 1313
-    Height = 818
+    Width = 1024
+    Height = 746
     Align = alClient
     Color = 14737632
     Ctl3D = True
     ParentBackground = False
     ParentCtl3D = False
     TabOrder = 0
-    ExplicitLeft = 8
-    ExplicitTop = -8
     object pnlCadastro: TPanel
       Left = 496
       Top = 85
@@ -135,8 +133,8 @@ object FrmCadastro: TFrmCadastro
         ParentFont = False
       end
       object btnInserirCadastro: TSpeedButton
-        Left = 194
-        Top = 562
+        Left = 202
+        Top = 530
         Width = 129
         Height = 29
         Anchors = [akTop, akRight]

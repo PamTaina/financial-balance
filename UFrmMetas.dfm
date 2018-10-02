@@ -2,8 +2,8 @@ object FrmMetas: TFrmMetas
   Left = 0
   Top = 0
   Caption = 'Meta'
-  ClientHeight = 878
-  ClientWidth = 1440
+  ClientHeight = 746
+  ClientWidth = 1024
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -12,18 +12,20 @@ object FrmMetas: TFrmMetas
   Font.Style = []
   OldCreateOrder = False
   WindowState = wsMaximized
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
   PixelsPerInch = 96
   TextHeight = 13
   object pnlFundo: TPanel
     Left = 0
     Top = 0
-    Width = 1440
-    Height = 878
+    Width = 1024
+    Height = 746
     Align = alClient
     Color = 14737632
     ParentBackground = False
     TabOrder = 0
-    ExplicitTop = 8
+    ExplicitTop = 32
     object pnlEntrar: TPanel
       Left = 536
       Top = 131
@@ -74,7 +76,7 @@ object FrmMetas: TFrmMetas
         Font.Style = []
         ParentFont = False
       end
-      object btnEfetuarEntradaMetaMensal: TSpeedButton
+      object btnlnserirMeta: TSpeedButton
         Left = 178
         Top = 546
         Width = 129
@@ -90,6 +92,7 @@ object FrmMetas: TFrmMetas
         ParentFont = False
         ParentShowHint = False
         ShowHint = False
+        OnClick = btnlnserirMetaClick
       end
       object edValorMeta: TEdit
         Left = 80
@@ -106,21 +109,6 @@ object FrmMetas: TFrmMetas
         ParentFont = False
         TabOrder = 0
       end
-      object edDataMeta: TEdit
-        Left = 80
-        Top = 415
-        Width = 129
-        Height = 25
-        Ctl3D = False
-        Font.Charset = ANSI_CHARSET
-        Font.Color = 5131854
-        Font.Height = -16
-        Font.Name = 'Calibri'
-        Font.Style = []
-        ParentCtl3D = False
-        ParentFont = False
-        TabOrder = 1
-      end
       object rgTipoMeta: TRadioGroup
         Left = 80
         Top = 147
@@ -135,11 +123,24 @@ object FrmMetas: TFrmMetas
         Font.Name = 'Calibri'
         Font.Style = []
         Items.Strings = (
-          'Fixa'
-          'Extra')
+          'Di'#225'ria'
+          'Mensal')
         ParentBackground = False
         ParentColor = False
         ParentFont = False
+        TabOrder = 1
+      end
+      object dpDataMeta: TDatePicker
+        Left = 80
+        Top = 415
+        Width = 193
+        Date = 43374.000000000000000000
+        DateFormat = 'dd/MM/yyyy'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -16
+        Font.Name = 'Segoe UI'
+        Font.Style = []
         TabOrder = 2
       end
     end

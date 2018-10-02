@@ -12,6 +12,8 @@ object FrmLancamento: TFrmLancamento
   Font.Style = []
   OldCreateOrder = False
   Position = poDesktopCenter
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
   PixelsPerInch = 96
   TextHeight = 13
   object pnlFundo: TPanel
@@ -95,7 +97,7 @@ object FrmLancamento: TFrmLancamento
         ParentFont = False
         OnClick = lbInserirAlimentacaoFixaClick
       end
-      object edAlimentacaoFixa: TEdit
+      object edValordespesa: TEdit
         Left = 35
         Top = 189
         Width = 207

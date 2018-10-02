@@ -75,8 +75,12 @@ end;
 
 procedure TFrmRendaFinanceira.FormDestroy(Sender: TObject);
 begin
-  FreeAndNil(FRegraCRUDLancamento);
+
+FreeAndNil(FRegraCRUDLancamento);
+
+
 end;
+
 
 end.
 
