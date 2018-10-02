@@ -25,7 +25,6 @@ object FrmMetas: TFrmMetas
     Color = 14737632
     ParentBackground = False
     TabOrder = 0
-    ExplicitTop = 32
     object pnlEntrar: TPanel
       Left = 536
       Top = 131

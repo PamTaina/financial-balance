@@ -32,7 +32,7 @@ object dmEntra21: TdmEntra21
       'VendorLib=libmysql.dll'
       'MaxBlobSize=-1'
       'DriverName=MySQL'
-      'HostName=localhost'
+      'HostName=proway3-pc'
       'User_Name=delphi'
       'BlobSize=-1'
       'ErrorResourceFile='

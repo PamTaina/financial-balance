@@ -2,8 +2,8 @@
   Left = 0
   Top = 0
   Caption = 'Vis'#227'o Geral'
-  ClientHeight = 878
-  ClientWidth = 1440
+  ClientHeight = 746
+  ClientWidth = 1024
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -19,8 +19,8 @@
   object pnlFundo: TPanel
     Left = 0
     Top = 0
-    Width = 1440
-    Height = 878
+    Width = 1024
+    Height = 746
     Align = alClient
     Color = 14737632
     ParentBackground = False
@@ -70,7 +70,6 @@
         Font.Name = 'Calibri'
         Font.Style = [fsBold]
         ParentFont = False
-        ExplicitLeft = 0
         object cbMesesRendaFinanceira: TComboBox
           Left = 607
           Top = 55
@@ -101,7 +100,7 @@
         end
         object dbgRendaFixa: TDBGrid
           Left = 96
-          Top = 104
+          Top = 121
           Width = 745
           Height = 193
           TabOrder = 1

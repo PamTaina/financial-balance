@@ -63,6 +63,7 @@ try
     LANCAMENTO.VALOR           := StrToFloat(edValorMeta.Text);
     LANCAMENTO.DATA            := DpDataMeta.Date;
 
+
  except
     on E: Exception do
     begin

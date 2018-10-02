@@ -2158,7 +2158,7 @@
         Font.Style = []
         ParentFont = False
       end
-      object imagemAlimentacao: TImage
+      object imAlimentacao: TImage
         Left = 32
         Top = 25
         Width = 33
@@ -2252,7 +2252,7 @@
           74455874646174653A6D6F6469667900323031382D30392D31325430303A3036
           3A30342B30303A30309573E6DA0000000049454E44AE426082}
       end
-      object ImagemLazer: TImage
+      object ImLazer: TImage
         Left = 32
         Top = 144
         Width = 33
@@ -2284,7 +2284,7 @@
           8E862F4E58122DEEDC3F2D3AE25D6ADDB8EB5486169513B6DA9CEEBE63EEA56B
           FCD7450F5FFFD9}
       end
-      object ImagemMoradia: TImage
+      object ImMoradia: TImage
         Left = 32
         Top = 205
         Width = 33
@@ -2319,7 +2319,7 @@
           000028744558747376673A626173652D7572690066696C653A2F2F2F746D702F
           6D616769636B2D534C436B6D7A73436D942A7E0000000049454E44AE426082}
       end
-      object imagemSaude: TImage
+      object imSaude: TImage
         Left = 32
         Top = 267
         Width = 33
@@ -2355,7 +2355,7 @@
           303A3030F3E7AC7E0000001974455874536F667477617265007777772E696E6B
           73636170652E6F72679BEE3C1A0000000049454E44AE426082}
       end
-      object imagemTransporte: TImage
+      object imTransporte: TImage
         Left = 32
         Top = 326
         Width = 33
@@ -2391,7 +2391,7 @@
           ADFF0052B6BCB489F3CF6F4E974F783B1F69AF0ADB582B16DAD4AA350AD9A4B5
           0A140A2D3421C74514FE6382D07C0938E29B84BF2A4464AAAAAAAABFFFD9}
       end
-      object imagemOutros: TImage
+      object imOutros: TImage
         Left = 32
         Top = 391
         Width = 33
@@ -2410,7 +2410,7 @@
           63560000002574455874646174653A6D6F6469667900323031382D30392D3132
           5430303A30393A32392B30303A3030478ADBEA0000000049454E44AE426082}
       end
-      object imagemAdicionarAlimentaçãoExtras: TImage
+      object imAdAlimentação: TImage
         Tag = 1
         Left = 270
         Top = 25
@@ -2480,7 +2480,7 @@
           6D616765526561647971C9653C0000000049454E44AE426082}
         OnClick = imTipoDespesaClick
       end
-      object imagemAdicionarEducacaoExtras: TImage
+      object imAdEducacao: TImage
         Tag = 2
         Left = 270
         Top = 84
@@ -2550,7 +2550,7 @@
           6D616765526561647971C9653C0000000049454E44AE426082}
         OnClick = imTipoDespesaClick
       end
-      object imagemAdicionarLazerExtras: TImage
+      object imAdLazer: TImage
         Tag = 3
         Left = 270
         Top = 144
@@ -2620,7 +2620,7 @@
           6D616765526561647971C9653C0000000049454E44AE426082}
         OnClick = imTipoDespesaClick
       end
-      object imagemAdicionarMoradiaExtras: TImage
+      object imAdMoradia: TImage
         Tag = 4
         Left = 270
         Top = 205
@@ -2690,7 +2690,7 @@
           6D616765526561647971C9653C0000000049454E44AE426082}
         OnClick = imTipoDespesaClick
       end
-      object imagemAdicionarSaudeExtras: TImage
+      object imAdSaude: TImage
         Tag = 5
         Left = 270
         Top = 267
@@ -2760,7 +2760,7 @@
           6D616765526561647971C9653C0000000049454E44AE426082}
         OnClick = imTipoDespesaClick
       end
-      object imagemAdicionarTransporteExtras: TImage
+      object imAdTransporte: TImage
         Tag = 6
         Left = 270
         Top = 326
@@ -2830,7 +2830,7 @@
           6D616765526561647971C9653C0000000049454E44AE426082}
         OnClick = imTipoDespesaClick
       end
-      object imagemAdicionarOutrosExtras: TImage
+      object imAdOutros: TImage
         Tag = 7
         Left = 270
         Top = 384
